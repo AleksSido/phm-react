@@ -3,10 +3,11 @@ import all from "../data/all";
 
 class Item extends React.Component {
  render(){
+   const lang = this.props.match.params.lang;
    const category = this.props.match.params.category;
    const item = this.props.match.params.item;
    const itemCategory = all.find(item=>{return item.idString === category});
-   const itemObj = itemCategory.items.find(itemObj => {return itemObj.idString === item});
+   const itemObj = itemCategory[lang].find(itemObj => {return itemObj.idString === item});
    return (
      <div>
        <div>{itemObj.name}</div>

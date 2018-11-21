@@ -1,17 +1,17 @@
 const beads = [
     {
         idString: 'beads1',
-        name: 'Wonderful Beads',
+        name: 'Чудові буси',
         data: 'Data on Wonderful Beads'
     },
     {
         idString: 'beads2',
-        name: 'Delicious Beads',
+        name: 'Незвичайні буси',
         data: 'Data on Delicious Beads'
     },
     {
         idString: 'beads3',
-        name: 'Exciting Beads',
+        name: 'Вражаючі буси',
         data: 'Data on Exciting Beads'
     },
 ];

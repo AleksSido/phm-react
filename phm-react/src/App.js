@@ -7,15 +7,24 @@ import Item from "./containers/Item";
 import Content from "./components/Content";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lang: 'uk'
+    };
+  }
+  setLang = (lang) => {
+    this.setState({lang});
+  };
 
   render() {
     return (
       <div className="body-wrapper">
         <BrowserRouter>
           <Content>
-            <Header/>
-            <Route exact path={'/:category/'} component={ListOfItems}/>
-            <Route exact path={'/:category/:item/'} component={Item}/>
+            <Header lang={this.state.lang} setLang={this.setLang}/>
+            <Route exact path={'/:lang/:category/'} component={ListOfItems}/>
+            <Route exact path={'/:lang/:category/:item/'} component={Item}/>
           </Content>
 
 
