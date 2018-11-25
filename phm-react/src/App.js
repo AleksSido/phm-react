@@ -7,6 +7,8 @@ import {BrowserRouter, Route} from "react-router-dom";
 // import Content from "./components/Content";
 import LanguageHandler from "./components/LanguageHandler";
 import Content from "./components/Content";
+import Item from "./containers/Item";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -20,13 +22,16 @@ class App extends React.Component {
   // };
 
   render() {
+
     return (
       <div className="body-wrapper">
         <BrowserRouter>
 
           <Content>
             <Route exact path={'/'} component={LanguageHandler}/>
-            <Route exact path={'/:lang'} component={LanguageHandler}/>
+            <Route exact path={'/:lang/'} component={LanguageHandler}/>
+            <Route exact path={'/:lang/:category/'} component={LanguageHandler}/>
+            <Route exact path={'/:lang/:category/:item/'} component={LanguageHandler}/>
           </Content>
 
 

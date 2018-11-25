@@ -3,7 +3,10 @@ import all from "../data/all";
 import {NavLink} from "react-router-dom";
 
 const Header = (props) => {
-    const style = {padding: '20px'};
+    const style = {
+      padding: '20px',
+      display: 'block'
+    };
   // const lang = props.match.params.lang;
   console.log(props);
     const langLink = props.lang === 'uk' ? 'ru' : 'uk';
@@ -14,7 +17,7 @@ const Header = (props) => {
         <div>
             {menuCategories}
             <div>
-              <NavLink style={style} to={'/' + langLink}>{langLink}</NavLink>
+              <NavLink style={style} to={'/' + langLink + '/'}>{langLink}</NavLink>
             </div>
         </div>
     );
