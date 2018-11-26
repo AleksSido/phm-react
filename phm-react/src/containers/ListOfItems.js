@@ -34,7 +34,7 @@ class ListOfItems extends React.Component{
       });
     } else {
       const itemsCategory = all.find(item => {return item.idString === category});
-     links = itemsCategory[lang].map((item, index) => {
+     links = item sCategory[lang].map((item, index) => {
         return this.returnCardLink(item, index, lang, itemsCategory.idString);;
       });
     }
