@@ -2,56 +2,58 @@ import * as React from 'react';
 import {NavLink} from "react-router-dom";
 import all from "../data/all";
 import {Helmet} from "react-helmet";
+import PageTitleContainer from "../components/PageTitleContainer";
+import text from "../data/text";
+import ItemCard from "../components/ItemCard";
 
 class ListOfItems extends React.Component{
-  // constructor(props){
-  //   super(props);
-  //
-  // }
-  returnCardLink = (item, index, lang, category) => {
-    return (<div key={category + '-link-'+ index}>
-      <NavLink  to={'/' + lang + '/'+ category +'/'+item.idString + '/'}>
-        {item.idString}
+  returnCardLink = (item, index, lang) => {
+    return (<div key={item.categoryString + '-link-'+ index}>
+      <NavLink className={'ItemCard__link'} to={'/' + lang + '/'+ item.categoryString +'/'+item.idString + '/'}>
+        <ItemCard item={item} lang={this.props.lang} />
       </NavLink>
     </div>)
   };
   render(){
-    console.log('kjl');
-
-    console.log(this.props);
-    // console.log(this.props.match.params);
-    // const lang = this.props.showAll ? this.props.lang : this.props.match.params.lang;
-    // const category = this.props.showAll ? 'all' : this.props.match.params.category;
     const lang = this.props.lang;
     const category = this.props.category;
     let links = [];
     if (this.props.showAll) {
-      links = all.map(itemsCategory => {
-        const itemsCategoryLinks = itemsCategory[lang].map((item, index) => {
-          return this.returnCardLink(item, index, lang, itemsCategory.idString);
+      all.forEach(itemsCategory => {
+        const itemsCategoryLinks = itemsCategory[lang].map((item) => {
+          return {...item, categoryString: itemsCategory.idString};
         });
-        return [...itemsCategoryLinks];
+        links.push(...itemsCategoryLinks);
       });
+      links = links.filter(item => !item.sameId);
+      console.log(links);
     } else {
       const itemsCategory = all.find(item => {return item.idString === category});
-     links = item sCategory[lang].map((item, index) => {
-        return this.returnCardLink(item, index, lang, itemsCategory.idString);;
+     links = itemsCategory[lang].map((item) => {
+       return {...item, categoryString: itemsCategory.idString};
       });
     }
 
-
+    links.sort((a, b) => {return b.id - a.id;});
+    const linksToItems = links.map((item, index) => {
+      return this.returnCardLink(item, index, lang);
+    });
 
     return (
-      <div>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Page {category}</title>
-        </Helmet>
-        <div>{category}</div>
-        <div>
-          {links}
-        </div>
-      </div>
+        <main className="main">
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Page {category}</title>
+          </Helmet>
+          <div className="main-wrapper">
+            <PageTitleContainer>{text[category][lang]}</PageTitleContainer>
+            <div>
+              {linksToItems}
+            </div>
+
+          </div>
+        </main>
+
 
     );
 

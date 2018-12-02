@@ -1,7 +1,7 @@
 const handmade = [
     {
         idString: 'handmade1',
-      id: 80,
+      id: 380,
         name: 'Wonderful Handmade',
         data: 'Data on Wonderful Handmade'
     },

@@ -1,0 +1,64 @@
+@media (min-width: 700px) {
+    .header {
+        margin-bottom: 24px;
+    }
+	.header-row {
+        display:  flex;
+        align-items: center;
+    }
+
+    .header-lang {
+        padding-top:  5px;
+        margin: 0 0 0 auto;
+    }
+
+    .logo {
+        display:  block;
+        height: 10%;
+        width: 20%;
+    }
+
+    .header-title-and-motto {
+        margin: auto;
+    }
+
+    .header-link-get__container {
+        width: 16%;
+        margin-bottom: 0;
+    }
+
+    .header-motto {
+        display: block;
+        /*font-family: 'HouseCasual';*/
+        font-family: 'Cormorant SC', serif;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        color: #59c5bd;
+    }
+    .header-contacts {
+        flex-wrap: nowrap;
+    }
+    .nav__m-ico {
+        display:  none;
+    }
+
+    .nav__links-container {
+        border: unset;
+        opacity: 1;
+        display:  flex;
+        flex-wrap:  wrap;
+        justify-content: center;
+        padding-top: 32px;
+        height: unset;
+    }
+
+    .nav__link {
+        margin: 0 30px 16px;
+    }
+
+    .header-title {
+        margin-bottom: 6px;
+    }
+}
+

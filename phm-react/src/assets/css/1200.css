@@ -1,0 +1,50 @@
+@media (min-width: 1200px) {
+	
+
+
+.body-wrapper {
+    padding: 0;
+}
+
+.header {
+    width: 1170px;
+    margin: 0 auto 44px;
+    padding-top: 11px;
+}
+
+.header-lang {
+    padding-top: 0;
+}
+
+.header-contacts {
+    margin-bottom: 0;
+}
+
+.logo {
+    width: 213px;
+}
+
+.header-row:first-child {
+    margin-bottom: 16px;
+}
+
+.header-motto {
+    letter-spacing: 2px;
+}
+
+.header-link-get__container {
+    width:  auto;
+}
+
+.nav__links-container {justify-content: space-between;padding: 15px 10px;}
+
+.nav__link {
+    margin: 0;
+    /* font-weight: 900; */
+}
+    .main-wrapper {
+        width: 1170px;
+        margin: auto;
+    }
+
+}
