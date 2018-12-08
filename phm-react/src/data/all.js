@@ -14,10 +14,10 @@ import handmadeRu from "./ru/handmade/handmade";
 
 const all = [
     {idString: 'beads', uk: beadsUk, ru: beadsRu},
-    // {idString: 'earrings', uk: earringsUk, ru: earringsRu},
-    // {idString: 'bracelets', uk: braceletsUk, ru: braceletsRu},
-    // {idString: 'collections', uk: collectionsUk, ru: collectionsRu},
-    // {idString: 'bridal', uk: bridalUk, ru: bridalRu},
-    // {idString: 'handmade', uk: handmadeUk, ru: handmadeRu }
+    {idString: 'earrings', uk: earringsUk, ru: earringsRu},
+    {idString: 'bracelets', uk: braceletsUk, ru: braceletsRu},
+    {idString: 'collections', uk: collectionsUk, ru: collectionsRu},
+    {idString: 'bridal', uk: bridalUk, ru: bridalRu},
+    {idString: 'handmade', uk: handmadeUk, ru: handmadeRu }
 ];
 export default all;

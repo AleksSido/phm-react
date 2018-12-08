@@ -60,5 +60,16 @@
     .header-title {
         margin-bottom: 6px;
     }
+    .item-cards {
+        margin: 0 -9px;
+    }
+    .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-wrapper {
+        padding-bottom: 40px;
+    }
 }
 

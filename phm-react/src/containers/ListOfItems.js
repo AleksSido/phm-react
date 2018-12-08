@@ -8,11 +8,13 @@ import ItemCard from "../components/ItemCard";
 
 class ListOfItems extends React.Component{
   returnCardLink = (item, index, lang) => {
-    return (<div key={item.categoryString + '-link-'+ index}>
-      <NavLink className={'ItemCard__link'} to={'/' + lang + '/'+ item.categoryString +'/'+item.idString + '/'}>
+    return (
+      <NavLink key={item.categoryString + '-link-'+ index}
+        className={'ItemCard__link'}
+               to={'/' + lang + '/'+ item.categoryString +'/'+item.idString + '/'}>
         <ItemCard item={item} lang={this.props.lang} />
       </NavLink>
-    </div>)
+    )
   };
   render(){
     const lang = this.props.lang;
@@ -47,7 +49,7 @@ class ListOfItems extends React.Component{
           </Helmet>
           <div className="main-wrapper">
             <PageTitleContainer>{text[category][lang]}</PageTitleContainer>
-            <div>
+            <div className="item-cards">
               {linksToItems}
             </div>
 

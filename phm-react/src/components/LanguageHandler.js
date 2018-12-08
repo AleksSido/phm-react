@@ -1,8 +1,9 @@
 import * as React from 'react';
-import Header from "./Header";
+import Header from "../containers/Header";
 import ListOfItems from "../containers/ListOfItems";
 import Item from "../containers/Item";
 import {Helmet} from "react-helmet";
+import Footer from "./Footer";
 
 const LanguageHandler = (props) => {
   const lang = props.match.params.lang ? props.match.params.lang : 'uk';
@@ -22,6 +23,7 @@ const LanguageHandler = (props) => {
     ) : (
       <ListOfItems showAll={showAll} lang={lang} category={category}/>
     )}
+    <Footer lang={lang}/>
   </>);
 };
 export default LanguageHandler;
