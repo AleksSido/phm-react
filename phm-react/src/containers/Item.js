@@ -11,11 +11,33 @@ class Item extends React.Component {
    const item = this.props.item;
    const itemCategory = all.find(item=>{return item.idString === category});
    const itemObj = itemCategory[lang].find(itemObj => {return itemObj.idString === item});
+
+   let thumbnails = [];
+   for (let i=0; i < itemObj.imagesNumber; i++) {
+     const imgSrc = require(`./../assets/img/thumbnails_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_${i+1}.jpg`);
+     const thumbnail = (<div key={`item-${i}`} className="item-thumbnails__img-container">
+         <img className="item-thumbnails__img" src={imgSrc} alt={itemObj.name} />
+       </div>
+       );
+     thumbnails.push(thumbnail);
+   }
+
    return (
 
        <main className="main">
          <div className="main-wrapper">
            <PageTitleContainer>{itemObj.name}</PageTitleContainer>
+           <div className="item-data">
+             <div className="item-photos">
+               <div className="item-thumbnails">
+                 {thumbnails}
+               </div>
+               <div className="item-slider">
+                 <img src={require(`./../assets/img/fullsize_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_1.jpg`)} alt={itemObj.name} />
+               </div>
+             </div>
+             <div className="item-text"></div>
+           </div>
            <div>
              <div>{itemObj.idString}</div>
              <div>

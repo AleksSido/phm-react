@@ -7,6 +7,17 @@ import text from "../data/text";
 import ItemCard from "../components/ItemCard";
 
 class ListOfItems extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      offset: 12,
+      count: 0,
+      paginationIsShown: false,
+      links: [],
+      linksToShow: [],
+      pagesNumber: null
+    };
+  }
   returnCardLink = (item, index, lang) => {
     return (
       <NavLink key={item.categoryString + '-link-'+ index}
@@ -16,13 +27,11 @@ class ListOfItems extends React.Component{
       </NavLink>
     )
   };
-  render(){
-    const lang = this.props.lang;
-    const category = this.props.category;
+  componentDidMount() {
     let links = [];
     if (this.props.showAll) {
       all.forEach(itemsCategory => {
-        const itemsCategoryLinks = itemsCategory[lang].map((item) => {
+        const itemsCategoryLinks = itemsCategory[this.props.lang].map((item) => {
           return {...item, categoryString: itemsCategory.idString};
         });
         links.push(...itemsCategoryLinks);
@@ -30,16 +39,48 @@ class ListOfItems extends React.Component{
       links = links.filter(item => !item.sameId);
       console.log(links);
     } else {
-      const itemsCategory = all.find(item => {return item.idString === category});
-     links = itemsCategory[lang].map((item) => {
-       return {...item, categoryString: itemsCategory.idString};
+      const itemsCategory = all.find(item => {
+        return item.idString === this.props.category
+      });
+      links = itemsCategory[this.props.lang].map((item) => {
+        return {...item, categoryString: itemsCategory.idString};
       });
     }
 
-    links.sort((a, b) => {return b.id - a.id;});
-    const linksToItems = links.map((item, index) => {
-      return this.returnCardLink(item, index, lang);
+    links.sort((a, b) => {
+      return b.id - a.id;
     });
+    let linksToShow = [];
+    let paginationIsShown = false;
+    let pagesNumber = null;
+    if (links.length <= this.state.offset) {
+      linksToShow = links;
+    } else {
+      paginationIsShown = true;
+      const fromIndex = this.state.count * this.state.offset;
+      const toIndex = fromIndex + this.state.offset;
+      linksToShow = links.slice(fromIndex, toIndex);
+      pagesNumber = Math.round(links.length/this.state.offset);
+    }
+    this.setState({paginationIsShown, links, linksToShow, pagesNumber});
+  }
+  render(){
+    const lang = this.props.lang;
+    const category = this.props.category;
+
+    const linksToItems = this.state.linksToShow.length ? this.state.linksToShow.map((item, index) => {
+      return this.returnCardLink(item, index, lang);
+    }) : null;
+
+    let pagination = [];
+    if (this.state.paginationIsShown) {
+      for (let i=0; i < this.state.pagesNumber; i++) {
+        const pageNumberClassName = this.state.count === i ? 'pagination__item pagination__item_active'
+          : 'pagination__item';
+        const pageNumberLink = (<div key={`page-number-${i}`} className={pageNumberClassName}>{i+1}</div>);
+        pagination.push(pageNumberLink);
+      }
+    }
 
     return (
         <main className="main">
@@ -52,6 +93,9 @@ class ListOfItems extends React.Component{
             <div className="item-cards">
               {linksToItems}
             </div>
+            {this.state.paginationIsShown ? (
+              <div className="pagination">{pagination}</div>
+            ) : null}
 
           </div>
         </main>

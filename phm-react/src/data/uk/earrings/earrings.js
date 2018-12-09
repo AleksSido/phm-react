@@ -1,21 +1,22 @@
 const earrings = [
-    {
-        idString: 'earrings1',
-      id: 40,
-        name: 'Wonderful Earrings',
-        data: 'Data on Wonderful Earrings'
-    },
-    {
-        idString: 'earrings2',
-      id: 140,
-        name: 'Delicious Earrings',
-        data: 'Data on Delicious Earrings'
-    },
-    {
-        idString: 'earrings3',
-      id: 240,
-        name: 'Exciting Earrings',
-        data: 'Data on Exciting Earrings'
-    },
+  {
+    idString: 'earrings_7',
+    id: 510,
+    name: 'Крижані краплинки',
+    available: false,
+    price: 80,
+    imagesNumber: 2,
+    addCategories: ['collections'],
+    // sameId: 240, //mention to exclude item from all items list
+    description: [
+      'При виготовленні використані чеські кришталеві прозорі намистини, веселкові намистини-крапельки, а також металеві намистини з огранкою.',
+      'Фурнітура з бижутерного сплаву, під серебро.',
+      'Сережки чудово довершать Ваш наряд, можуть слугувати прикрасою нареченій, а також будь-якій чарівній особі, щоб підкреслити її ніжність та неповторність. Прикраса прикрасить Ваш образ, зробить його чарівним, прикує до Вас погляди. Фото не передає всієї краси цих сережек. Дуже красиві, ніжні, виразні.',
+    ],
+    dimensions:
+      'Довжина прикраси зі швензою – 6 см.',
+    related: [500, 710]
+  },
+
 ];
 export default earrings;

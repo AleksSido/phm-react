@@ -391,9 +391,11 @@ margin-bottom: 40px;
     padding-bottom: 30px;
 }
 .social-contacts__item {
+    display: block;
     width: 30px;
     height: 30px;
     margin: 9px;
+    cursor: pointer;
 }
 .social-contacts__item svg {
     fill: #54c3bc;
@@ -407,4 +409,47 @@ margin-bottom: 40px;
     border-top: 1px solid #54c3bc;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+}
+.pagination__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    color: #53c3bb;
+    font-size: 16px;
+    margin: 9px;
+    background-image: url("./../img/page-number.png");
+    cursor: pointer;
+}
+.pagination__item:hover {
+    color: #f6a3c7;
+}
+.pagination__item.pagination__item_active {
+    background-image: url("./../img/page-number-active.png");
+    color: #ffffff;
+    cursor: unset;
+}
+.item-thumbnails {
+    display: flex;
+    padding-bottom: 15px;
+}
+.item-thumbnails__img-container {
+    width: 102px;
+    height: 78px;
+    border: 1px solid #59c5bd;
+    padding: 2px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.item-thumbnails__img-container:last-child {
+    margin-right: 0;
+}
+.item-thumbnails__img-container:hover {
+    border-color: #f6a3c7;
 }

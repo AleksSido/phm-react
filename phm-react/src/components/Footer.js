@@ -40,12 +40,12 @@ const Footer = (props) => {
         </div>
       </div>
       <div className="social-contacts">
-        <div className="social-contacts__item">
+        <a href={"https://www.facebook.com/prykrasyHm"} target="_blank" className="social-contacts__item">
           <FacebookSvg/>
-        </div>
-        <div className="social-contacts__item">
+        </a>
+        <a href={"https://www.instagram.com/prykrasy_hm/"} target="_blank" className="social-contacts__item">
           <InstragramSvg/>
-        </div>
+        </a>
       </div>
       <div className="footer__copyright">{"Copyright © " + currentYear + " " + text.siteTitle}</div>
     </footer>
