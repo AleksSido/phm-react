@@ -71,8 +71,14 @@
     .main-wrapper {
         padding-bottom: 40px;
     }
-    .item-slider {
+    .item-data {
+        display: flex;
+    }
+    .item-photos {
         width: 570px;
+    }
+    .item__available-and-note {
+        max-width: 400px;
     }
 }
 

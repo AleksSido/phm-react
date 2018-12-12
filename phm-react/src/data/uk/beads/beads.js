@@ -3,7 +3,7 @@ const beads = [
     idString: 'beads_1',
     id: 500,
     name: 'Крижане царство',
-    available: false,
+    available: true,
     price: 300,
     imagesNumber: 4,
     addCategories: ['collections'],

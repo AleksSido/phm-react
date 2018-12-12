@@ -52,6 +52,11 @@
         width: 1170px;
         margin: 0 auto;
     }
-
+    .item-photos {
+        margin-right: 29px;
+    }
+    .item-text {
+        width: 570px;
+    }
 
 }

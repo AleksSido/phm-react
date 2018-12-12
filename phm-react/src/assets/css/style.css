@@ -20,6 +20,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Cormorant+SC');
+/*@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic,cyrillic-ext');*/
 /*reset styles*/
 
 html {
@@ -305,6 +306,9 @@ margin-bottom: 40px;
 .ItemCard__categories {
     font-size: 10px;
 }
+.ItemCard__categories span{
+    margin-right: 10px;
+}
 .ItemCard__available-note {
     font-size: 10px;
 }
@@ -435,6 +439,7 @@ margin-bottom: 40px;
     color: #ffffff;
     cursor: unset;
 }
+
 .item-thumbnails {
     display: flex;
     padding-bottom: 15px;
@@ -452,4 +457,52 @@ margin-bottom: 40px;
 }
 .item-thumbnails__img-container:hover {
     border-color: #f6a3c7;
+}
+.item-slider__img-controls {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+.item__available-and-price {
+    display: flex;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.item__avialable {
+    text-transform: uppercase;
+    font-family: 'Comfortaa-Bold';
+    font-size: 12px;
+    padding-bottom: 8px;
+}
+.item__note {
+    font-size: 12px;
+}
+.item__price {
+    margin-left: auto;
+    font-family: 'Comfortaa-Bold';
+    font-size: 19px;
+}
+.item__categories {
+    margin-bottom: 40px;
+}
+.item__categories span {
+    margin-right: 10px;
+}
+.pink-border {
+    width: 100%;
+    height: 1px;
+    background-color: #f6a3c7;
+}
+.item__section-title {
+    padding-top: 19px;
+    font-family: 'Comfortaa-Bold';
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+.item__section-text {
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    text-align: justify;
 }

@@ -22,15 +22,14 @@ class ItemCard extends React.Component {
     const availableNote = this.props.item.available ? null : text.isNotAvailableNote[this.props.lang];
     const categories = this.props.item.addCategories ? [...this.props.item.addCategories, this.props.item.categoryString]
       : [this.props.item.categoryString];
-    const textCategories = categories.map(item => text[item][this.props.lang]);
-    const joinedTextCategories = textCategories.join('   ');
-    const sliderSettings = {
+    const textCategories = categories.map((item, index) => {
+      return (<span key={item + index}>{text[item][this.props.lang]}</span>);
+    });
 
-    };
     return (
       <div className="ItemCard">
         <div className="ItemCard__img-container">
-          <Slider ref={c => (this.slider = c)} settings={sliderSettings}>
+          <Slider ref={c => (this.slider = c)}>
             {images}
           </Slider>
         </div>
@@ -46,7 +45,7 @@ class ItemCard extends React.Component {
         </div>
         <div className="ItemCard__name">{this.props.item.name}</div>
         <div className="ItemCard__price">{this.props.item.price + ' ' + text.hryvny}</div>
-        <div className="ItemCard__categories">{joinedTextCategories}</div>
+        <div className="ItemCard__categories">{textCategories}</div>
       </div>
     );
   }
