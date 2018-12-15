@@ -72,13 +72,29 @@
         padding-bottom: 40px;
     }
     .item-data {
-        display: flex;
+        /*display: flex;*/
+        padding-bottom: 50px;
     }
     .item-photos {
         width: 570px;
+
     }
     .item__available-and-note {
         max-width: 400px;
     }
+    .item-thumbnails {
+        display: flex;
+    }
 }
+@media (min-width: 1000px) {
+    .item-data {
+        display: flex;
+        /*padding-bottom: 50px;*/
+    }
+    .item-photos {
+        width: 50%;
+        margin-right: 20px;
+    }
+}
+
 

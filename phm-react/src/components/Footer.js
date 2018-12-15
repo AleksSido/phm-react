@@ -12,6 +12,7 @@ const Footer = (props) => {
     return (
       <NavLink
         className="nav__link"
+        activeClassName="nav__link_active"
         to={'/' + props.lang + '/' + item.idString + '/'}
         key={'menu-category-' + index}>{text[item.idString][props.lang]}</NavLink>);
   });
@@ -23,7 +24,7 @@ const Footer = (props) => {
         {menuCategories}
       </nav>
       <div className="footer-link-get__container">
-        <a href="">{text.howToBuy[props.lang]}</a>
+        <NavLink to={`/${props.lang}/how-to-buy/`}>{text.howToBuy[props.lang]}</NavLink>
       </div>
       <div className="footer__contacts">
         <div className="header-contacts__mail">

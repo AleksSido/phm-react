@@ -62,6 +62,10 @@ const text = {
   orderItem: {
     uk: 'Замовлення виробу',
     ru: 'Заказ изделия'
+  },
+  otherItemsTitle: {
+    uk: 'Інші вироби',
+    ru: 'Другие изделия'
   }
 };
 export default text;

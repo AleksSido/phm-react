@@ -41,15 +41,65 @@ const beads = [
     price: 300,
     imagesNumber: 4
   },
-  // {
-  //   idString: 'beads_5',
-  //   id: 460,
-  //   name: 'Перлинний дотик',
-  //   available: true,
-  //   price: 200,
-  //   imagesNumber: 4,
-  //   addCategories: ['bridal'],
-  //   // sameId: 240, //mention to exclude item from all items list
-  // },
+  {
+    idString: 'beads_5',
+    id: 460,
+    name: 'Перлинний дотик',
+    available: true,
+    price: 200,
+    imagesNumber: 4,
+    addCategories: ['bridal'],
+    // sameId: 240, //mention to exclude item from all items list
+  },
+  {
+    idString: 'beads_6',
+    id: 450,
+    name: 'Перлинне розмаїття',
+    available: true,
+    price: 250,
+    imagesNumber: 4,
+    addCategories: ['bridal'],
+    // sameId: 240, //mention to exclude item from all items list
+  },
+  {
+    idString: 'beads_7',
+    id: 440,
+    name: 'Гранатовий глінтвейн',
+    available: true,
+    price: 200,
+    imagesNumber: 4,
+    addCategories: ['bridal'],
+    // sameId: 240, //mention to exclude item from all items list
+  },
+  {
+    idString: 'beads_8',
+    id: 430,
+    name: 'Морська блакить',
+    available: true,
+    price: 250,
+    imagesNumber: 3,
+    addCategories: ['bridal'],
+    // sameId: 240, //mention to exclude item from all items list
+  },
+  {
+    idString: 'beads_9',
+    id: 420,
+    name: 'Фантазія в спокійних тонах',
+    available: true,
+    price: 200,
+    imagesNumber: 3,
+    addCategories: ['bridal'],
+    // sameId: 240, //mention to exclude item from all items list
+  },
+  {
+    idString: 'beads_10',
+    id: 410,
+    name: 'Фіалкове розмаїття',
+    available: true,
+    price: 200,
+    imagesNumber: 4,
+    addCategories: ['bridal'],
+    // sameId: 240, //mention to exclude item from all items list
+  },
 ];
 export default beads;

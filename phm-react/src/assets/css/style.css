@@ -1,8 +1,8 @@
 
-@font-face {
-	font-family: 'HouseCasual';
-	src: url('../fonts/House Casual.otf');
-}
+/*@font-face {*/
+	/*font-family: 'HouseCasual';*/
+	/*src: url('../fonts/House Casual.otf');*/
+/*}*/
 @font-face {
 	font-family: 'Comfortaa-Light';
 	font-weight: 300;
@@ -18,6 +18,16 @@
 	font-weight: 700;
 	src: url('../fonts/Comfortaa-Bold.ttf');
 }
+/*@font-face {*/
+	/*font-family: 'Cormorant SC';*/
+	/*font-weight: 400;*/
+	/*src: url('../fonts/CormorantSC-Regular.woff');*/
+/*}*/
+/*@font-face {*/
+	/*font-family: 'Cormorant SC';*/
+	/*font-weight: 700;*/
+	/*src: url('../fonts/CormorantSC-Bold.woff');*/
+/*}*/
 
 @import url('https://fonts.googleapis.com/css?family=Cormorant+SC');
 /*@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic,cyrillic-ext');*/
@@ -26,13 +36,13 @@
 html {
   font-family: 'Comfortaa-Regular', cursive;
   -ms-text-size-adjust: 100%; 
-  -webkit-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
   color: #2f2f2f;
 }
 body {
   margin: 0;
   padding: 0;
-  line-height: 1; 
+  line-height: 1;
   color: #2f2f2f;
 }
 * {
@@ -166,7 +176,9 @@ img{
     margin-bottom: 16px;
     text-align:  center;
 }
-
+.nav__link.nav__link_active {
+    color: #f6a3c7;
+}
 .nav__m-ico {
     border:  1px solid;
     width:  32px;
@@ -240,6 +252,7 @@ margin-bottom: 40px;
   text-align: center;
   letter-spacing: 1px;
   margin: 0 8px;
+    font-weight: bold;
 }
 
 .caution {
@@ -396,8 +409,8 @@ margin-bottom: 40px;
 }
 .social-contacts__item {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     margin: 9px;
     cursor: pointer;
 }
@@ -441,7 +454,7 @@ margin-bottom: 40px;
 }
 
 .item-thumbnails {
-    display: flex;
+    display: none;
     padding-bottom: 15px;
 }
 .item-thumbnails__img-container {
@@ -505,4 +518,72 @@ margin-bottom: 40px;
     line-height: 1.7;
     margin-bottom: 22px;
     text-align: justify;
+}
+.item__buy-contacts {
+    display: flex;
+    padding-top: 3px;
+    padding-bottom: 18px;
+    flex-wrap: wrap;
+}
+.item__buy-contacts .header-contacts__link {
+    color: #59c5bd;
+}
+.item__buy-contacts svg {
+    fill: #59c5bd;
+}
+.item__buy-contacts .header-contacts__link:hover {
+    color: #f6a3c7;
+}
+.header-contacts__phone:hover svg,
+.header-contacts__mail:hover svg {
+    fill: #f6a3c7;
+}
+.item__share-btns {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+.item__share-btn {
+    display: block;
+    width: 20px;
+    margin-left: 14px;
+}
+.item__share-btn svg {
+    fill: #54c3bc;
+}
+.item__share-btn:hover svg {
+    fill: #f6a3c7;
+}
+.OtherItemsTitleContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+.OtherItemsTitleContainer__back-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #f6a3c7;
+    z-index: 0;
+    top: 12px;
+}
+.OtherItemsTitleContainer__text {
+    font-family: 'Cormorant SC', serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 20;
+}
+.item-photos {
+    margin-bottom: 20px;
+    max-width: 570px;
+}
+.item-data {
+    padding-bottom: 20px;
 }

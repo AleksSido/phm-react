@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet";
 import PageTitleContainer from "../components/PageTitleContainer";
 import text from "../data/text";
 import ItemCard from "../components/ItemCard";
+import OtherItemsTitleContainer from "../components/OtherItemsTitleContainer";
 
 class ListOfItems extends React.Component{
   constructor(props){
@@ -27,7 +28,7 @@ class ListOfItems extends React.Component{
       </NavLink>
     )
   };
-  componentDidMount() {
+  handleListOfItems = () => {
     let links = [];
     if (this.props.showAll) {
       all.forEach(itemsCategory => {
@@ -37,7 +38,6 @@ class ListOfItems extends React.Component{
         links.push(...itemsCategoryLinks);
       });
       links = links.filter(item => !item.sameId);
-      console.log(links);
     } else {
       const itemsCategory = all.find(item => {
         return item.idString === this.props.category
@@ -50,6 +50,11 @@ class ListOfItems extends React.Component{
     links.sort((a, b) => {
       return b.id - a.id;
     });
+    if (this.props.exceptFor) {
+      const exceptForIndex = links.findIndex(item => item.idString === this.props.exceptFor);
+      links.splice(exceptForIndex, 1);
+    }
+
     let linksToShow = [];
     let paginationIsShown = false;
     let pagesNumber = null;
@@ -60,9 +65,21 @@ class ListOfItems extends React.Component{
       const fromIndex = this.state.count * this.state.offset;
       const toIndex = fromIndex + this.state.offset;
       linksToShow = links.slice(fromIndex, toIndex);
-      pagesNumber = Math.round(links.length/this.state.offset);
+      pagesNumber = Math.ceil(links.length/this.state.offset);
     }
     this.setState({paginationIsShown, links, linksToShow, pagesNumber});
+  };
+  componentDidMount() {
+    this.handleListOfItems();
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.count !== this.state.count
+    || prevProps.showAll !== this.props.showAll
+    || prevProps.lang !== this.props.lang
+    || prevProps.category !== this.props.category
+    || prevProps.exceptFor !== this.props.exceptFor) {
+      this.handleListOfItems();
+    }
   }
   render(){
     const lang = this.props.lang;
@@ -77,28 +94,35 @@ class ListOfItems extends React.Component{
       for (let i=0; i < this.state.pagesNumber; i++) {
         const pageNumberClassName = this.state.count === i ? 'pagination__item pagination__item_active'
           : 'pagination__item';
-        const pageNumberLink = (<div key={`page-number-${i}`} className={pageNumberClassName}>{i+1}</div>);
+        const pageNumberLink = this.state.count === i ?
+          (<div key={`page-number-${i}`} className={pageNumberClassName}>{i+1}</div>)
+          : (<div onClick={(e)=>{this.setState({count: i})}} key={`page-number-${i}`} className={pageNumberClassName}>{i+1}</div>);
         pagination.push(pageNumberLink);
       }
     }
 
     return (
-        <main className="main">
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>Page {category}</title>
-          </Helmet>
-          <div className="main-wrapper">
-            <PageTitleContainer>{text[category][lang]}</PageTitleContainer>
-            <div className="item-cards">
-              {linksToItems}
-            </div>
-            {this.state.paginationIsShown ? (
-              <div className="pagination">{pagination}</div>
-            ) : null}
+        <>
+          {this.props.exceptFor ? null : (
+            <Helmet>
+              <title>{text.siteTitle + " - " + text[category][lang]}</title>
+            </Helmet>
+          )}
 
+          {this.props.exceptFor ? (
+            <OtherItemsTitleContainer lang={lang}/>
+            ) : (
+            <PageTitleContainer>{text[category][lang]}</PageTitleContainer>
+          )}
+          <div className="item-cards">
+            {linksToItems}
           </div>
-        </main>
+          {this.state.paginationIsShown ? (
+            <div className="pagination">{pagination}</div>
+          ) : null}
+
+
+        </>
 
 
     );

@@ -4,6 +4,11 @@ import {Helmet} from "react-helmet";
 import PageTitleContainer from "../components/PageTitleContainer";
 import text from "../data/text";
 import Slider from "react-slick";
+import SmartphoneSvg from "../svg-components/SmartphoneSvg";
+import MailSvg from "../svg-components/MailSvg";
+import FacebookSvg from "../svg-components/FacebookSvg";
+import TwitterSvg from "../svg-components/TwitterSvg";
+import PinterestSvg from "../svg-components/PinterestSvg";
 
 class Item extends React.Component {
   handlePrev = (e) => {
@@ -48,51 +53,67 @@ class Item extends React.Component {
    });
    return (
 
-       <main className="main">
-         <div className="main-wrapper">
-           <PageTitleContainer>{itemObj.name}</PageTitleContainer>
-           <div className="item-data">
-             <div className="item-photos">
-               <div className="item-thumbnails">
-                 {thumbnails}
+       <>
+         <Helmet>
+           <title>{text.siteTitle + " - " + itemObj.name}</title>
+         </Helmet>
+         <PageTitleContainer>{itemObj.name}</PageTitleContainer>
+         <div className="item-data">
+           <div className="item-photos">
+             <div className="item-thumbnails">
+               {thumbnails}
+             </div>
+             <div className="item-slider">
+               <Slider ref={c => (this.slider = c)} >
+                 {photos}
+               </Slider>
+             </div>
+             <div className="item-slider__img-controls">
+               <div className="ItemCard__left-arrow" onClick={this.handlePrev}/>
+               <div className="ItemCard__right-arrow" onClick={this.handleNext}/>
+             </div>
+           </div>
+
+           <div className="item-text">
+             <div className="item__available-and-price">
+               <div className="item__available-and-note">
+                 <div className="item__avialable">{available}</div>
+                 <div className="item__note">{availableNote}</div>
                </div>
-               <div className="item-slider">
-                 <Slider ref={c => (this.slider = c)} >
-                   {photos}
-                 </Slider>
+               <div className="item__price">{itemObj.price + ' ' + text.hryvny}</div>
+             </div>
+             <div className="item__categories">{textCategories}</div>
+             <div className="pink-border"/>
+             <div className="item__section-title">{text.description[lang]}</div>
+             {description}
+             <div className="pink-border"/>
+             <div className="item__section-title">{text.dimensions[lang]}</div>
+             <div className="item__section-text">{itemObj.dimensions}</div>
+             <div className="pink-border"/>
+             <div className="item__section-title">{text.orderItem[lang]}</div>
+             <div className="item__buy-contacts">
+               <div className="header-contacts__phone">
+                 <div className="header-contacts__phone-ico">
+                   <SmartphoneSvg/>
+                 </div>
+                 <a href={"tel"+text.tel} className="header-contacts__link">{text.tel}</a>
                </div>
-               <div className="item-slider__img-controls">
-                 <div className="ItemCard__left-arrow" onClick={this.handlePrev}/>
-                 <div className="ItemCard__right-arrow" onClick={this.handleNext}/>
+               <div className="header-contacts__mail">
+                 <div className="header-contacts__mail-ico">
+                   <MailSvg/>
+                 </div>
+                 <a href={"mailto:"+text.mail} className="header-contacts__link">{text.mail}</a>
                </div>
              </div>
-
-             <div className="item-text">
-               <div className="item__available-and-price">
-                 <div className="item__available-and-note">
-                   <div className="item__avialable">{available}</div>
-                   <div className="item__note">{availableNote}</div>
-                 </div>
-                 <div className="item__price">{itemObj.price + ' ' + text.hryvny}</div>
-               </div>
-               <div className="item__categories">{textCategories}</div>
-               <div className="pink-border"/>
-               <div className="item__section-title">{text.description[lang]}</div>
-               {description}
-               <div className="pink-border"/>
-               <div className="item__section-title">{text.dimensions[lang]}</div>
-               <div className="item__section-text">{itemObj.dimensions}</div>
-               <div className="pink-border"/>
-               <div className="item__section-title">{text.orderItem[lang]}</div>
+             <div className="pink-border"/>
+             <div className="item__share-btns">
+               <a href="" className="item__share-btn"><FacebookSvg/></a>
+               <a href="" className="item__share-btn"><PinterestSvg/></a>
+               <a href="" className="item__share-btn"><TwitterSvg/></a>
              </div>
            </div>
          </div>
-       </main>
-
-
-
-
-
+       </>
    );
  }
 }

@@ -28,6 +28,7 @@ class Header extends React.Component {
         <NavLink
           onClick={this.hideMobileMenu}
           className="nav__link"
+          activeClassName="nav__link_active"
           to={'/' + this.props.lang + '/' + item.idString + '/'}
           key={'menu-category-' + index}>{text[item.idString][this.props.lang]}</NavLink>);
     });
@@ -62,7 +63,7 @@ class Header extends React.Component {
             <h2 className="header-motto">{text.siteMotto[this.props.lang]}</h2>
           </div>
           <div className="header-link-get__container">
-            <a href="">{text.howToBuy[this.props.lang]}</a>
+            <NavLink to={`/${this.props.lang}/how-to-buy/`}>{text.howToBuy[this.props.lang]}</NavLink>
           </div>
         </div>
         <nav id="headerNav" className={headerNavClassName}>

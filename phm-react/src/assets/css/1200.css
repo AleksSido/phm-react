@@ -58,5 +58,8 @@
     .item-text {
         width: 570px;
     }
+    .item-cards {
+        justify-content: normal;
+    }
 
 }

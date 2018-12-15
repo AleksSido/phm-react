@@ -11,6 +11,7 @@ const App = (props) => {
             <Route exact path={'/:lang/'} component={LanguageHandler}/>
             <Route exact path={'/:lang/:category/'} component={LanguageHandler}/>
             <Route exact path={'/:lang/:category/:item/'} component={LanguageHandler}/>
+
           </>
         </BrowserRouter>
       </div>
