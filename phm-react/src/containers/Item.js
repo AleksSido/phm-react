@@ -9,6 +9,7 @@ import MailSvg from "../svg-components/MailSvg";
 import FacebookSvg from "../svg-components/FacebookSvg";
 import TwitterSvg from "../svg-components/TwitterSvg";
 import PinterestSvg from "../svg-components/PinterestSvg";
+import {NavLink} from "react-router-dom";
 
 class Item extends React.Component {
   handlePrev = (e) => {
@@ -44,10 +45,24 @@ class Item extends React.Component {
    }
    const available = itemObj.available ? text.isAvailable[lang] : text.isNotAvailable[lang];
    const availableNote = itemObj.available ? null : text.isNotAvailableNote[lang];
-   const categories = [category, ...itemObj.addCategories];
+   const categories = itemObj.addCategories ? [category, ...itemObj.addCategories] : [category];
    const textCategories = categories.map((item, index) => {
      return (<span key={item + index}>{text[item][lang]}</span>);
    });
+   const relatedLinks = itemObj.related ? itemObj.related.map((relatedLinksItem,index)=> {
+     const category = relatedLinksItem.split('_')[0];
+     const categoryArr = all.find(item => item.idString === category);
+     const relatedItem = categoryArr[lang].find(item => item.idString === relatedLinksItem);
+     console.log(relatedLinksItem, category, relatedItem);
+     return (
+       <NavLink
+         key={`item__related-link-${index}`}
+         to={`/${lang}/${category}/${relatedLinksItem}/`}
+         className="item__related-link">
+         {relatedItem.name}
+       </NavLink>
+     )
+   }) : null;
    const description = itemObj.description.map((item, index)=> {
      return (<div key={`${item}-desc-${index}`} className="item__section-text">{item}</div>)
    });
@@ -83,12 +98,29 @@ class Item extends React.Component {
                <div className="item__price">{itemObj.price + ' ' + text.hryvny}</div>
              </div>
              <div className="item__categories">{textCategories}</div>
+             {itemObj.related ? (
+              <>
+                <div className="pink-border"/>
+                <div className="item__section-title">{text.collection[lang]}</div>
+                <div className="item__related-links">
+                  {relatedLinks}
+                </div>
+              </>
+             ) : null}
+
+
              <div className="pink-border"/>
              <div className="item__section-title">{text.description[lang]}</div>
              {description}
-             <div className="pink-border"/>
-             <div className="item__section-title">{text.dimensions[lang]}</div>
-             <div className="item__section-text">{itemObj.dimensions}</div>
+
+             {itemObj.dimensions ? (
+              <>
+                <div className="pink-border"/>
+                <div className="item__section-title">{text.dimensions[lang]}</div>
+                <div className="item__section-text">{itemObj.dimensions}</div>
+              </>
+             ) : null}
+
              <div className="pink-border"/>
              <div className="item__section-title">{text.orderItem[lang]}</div>
              <div className="item__buy-contacts">

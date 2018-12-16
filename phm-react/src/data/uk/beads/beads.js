@@ -14,8 +14,7 @@ const beads = [
     dimensions:
     "За верхньою низкою – 63 см, по нижньому краю – 76 см.",
     addCategories: ["collections"],
-    // sameId: 240, //mention to exclude item from all items list
-    related: [510, 710]
+    related: ["earrings_7", "collections_3"]
   },
   {
     idString: "beads_2",
@@ -47,7 +46,7 @@ const beads = [
     dimensions:
       "Довжина прикраси – 49 см, з ланцюжком-подовжувачем – 56 см.",
     addCategories: ["collections"],
-    // related: [earrings_9]
+    related: ["earrings_9", "collections_4"]
   },
   {
     idString: "beads_4",
@@ -80,8 +79,7 @@ const beads = [
     dimensions:
       "По внутрішньому краю – 38 см, по зовнішньому – 46 см. Є подовження 7 см.",
     addCategories: ["collections", "bridal"],
-    // related: [earrings_3],
-    // sameId: 240, //mention to exclude item from all items list
+    related: ["earrings_3", "collections_2", "bridal_3"]
   },
   {
     idString: "beads_6",
@@ -116,7 +114,7 @@ const beads = [
     dimensions:
       "По внутрішньому краю – 55 см, по зовнішньому – 65 см.",
     addCategories: ["collections"],
-    // related: [earrings_2],
+    related: ["earrings_2", "collections_1"]
   },
   {
     idString: "beads_8",
