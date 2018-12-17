@@ -32,7 +32,7 @@ class ListOfItems extends React.Component{
     let links = [];
     if (this.props.showAll) {
       all.forEach(itemsCategory => {
-        const itemsCategoryLinks = itemsCategory[this.props.lang].map((item) => {
+        const itemsCategoryLinks = itemsCategory.items.map((item) => {
           return {...item, categoryString: itemsCategory.idString};
         });
         links.push(...itemsCategoryLinks);
@@ -42,7 +42,7 @@ class ListOfItems extends React.Component{
       const itemsCategory = all.find(item => {
         return item.idString === this.props.category
       });
-      links = itemsCategory[this.props.lang].map((item) => {
+      links = itemsCategory.items.map((item) => {
         return {...item, categoryString: itemsCategory.idString};
       });
     }

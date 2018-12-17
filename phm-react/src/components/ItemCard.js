@@ -16,7 +16,7 @@ class ItemCard extends React.Component {
     for (let i=1; i < (this.props.item.imagesNumber+1); i++) {
       images.push(<img key={this.props.item.idString + '_' + i}
                        src={require(`./../assets/img/thumbnails_with_logo/${this.props.item.categoryString}/${this.props.item.idString}/${this.props.item.idString}_${i}.jpg`)}
-                       alt={this.props.item.name} className="ItemCard__img"/>);
+                       alt={this.props.item.name[this.props.lang]} className="ItemCard__img"/>);
     }
     const available = this.props.item.available ? text.isAvailable[this.props.lang] : text.isNotAvailable[this.props.lang];
     const availableNote = this.props.item.available ? null : text.isNotAvailableNote[this.props.lang];
@@ -43,7 +43,7 @@ class ItemCard extends React.Component {
             <div className="ItemCard__right-arrow" onClick={this.handleNext}/>
           </div>
         </div>
-        <div className="ItemCard__name">{this.props.item.name}</div>
+        <div className="ItemCard__name">{this.props.item.name[this.props.lang]}</div>
         <div className="ItemCard__price">{this.props.item.price + ' ' + text.hryvny}</div>
         <div className="ItemCard__categories">{textCategories}</div>
       </div>

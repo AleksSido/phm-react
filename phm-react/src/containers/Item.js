@@ -25,7 +25,7 @@ class Item extends React.Component {
    const category = this.props.category;
    const item = this.props.item;
    const itemCategory = all.find(item=>{return item.idString === category});
-   const itemObj = itemCategory[lang].find(itemObj => {return itemObj.idString === item});
+   const itemObj = itemCategory.items.find(itemObj => {return itemObj.idString === item});
 
    let thumbnails = [];
    let photos = [];
@@ -33,11 +33,11 @@ class Item extends React.Component {
      const thumbSrc = require(`./../assets/img/thumbnails_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_${i+1}.jpg`);
      const photoSrc = require(`./../assets/img/fullsize_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_${i+1}.jpg`);
      const thumbnail = (<div key={`item-${i}`} className="item-thumbnails__img-container" onClick={()=>{this.slider.slickGoTo(i)}}>
-         <img className="item-thumbnails__img" src={thumbSrc} alt={itemObj.name} />
+         <img className="item-thumbnails__img" src={thumbSrc} alt={itemObj.name[lang]} />
        </div>
        );
      const photo = (<div key={`item-photo-${i}`} className="item-slider__photo-container">
-         <img className="item-slider__photo" src={photoSrc} alt={itemObj.name} />
+         <img className="item-slider__photo" src={photoSrc} alt={itemObj.name[lang]} />
        </div>
      );
      thumbnails.push(thumbnail);
@@ -52,27 +52,26 @@ class Item extends React.Component {
    const relatedLinks = itemObj.related ? itemObj.related.map((relatedLinksItem,index)=> {
      const category = relatedLinksItem.split('_')[0];
      const categoryArr = all.find(item => item.idString === category);
-     const relatedItem = categoryArr[lang].find(item => item.idString === relatedLinksItem);
-     console.log(relatedLinksItem, category, relatedItem);
+     const relatedItem = categoryArr.items.find(item => item.idString === relatedLinksItem);
      return (
        <NavLink
          key={`item__related-link-${index}`}
          to={`/${lang}/${category}/${relatedLinksItem}/`}
          className="item__related-link">
-         {relatedItem.name}
+         {relatedItem.name[lang]}
        </NavLink>
      )
    }) : null;
-   const description = itemObj.description.map((item, index)=> {
+   const description = itemObj.description[lang].map((item, index)=> {
      return (<div key={`${item}-desc-${index}`} className="item__section-text">{item}</div>)
    });
    return (
 
        <>
          <Helmet>
-           <title>{text.siteTitle + " - " + itemObj.name}</title>
+           <title>{text.siteTitle + " - " + itemObj.name[lang]}</title>
          </Helmet>
-         <PageTitleContainer>{itemObj.name}</PageTitleContainer>
+         <PageTitleContainer>{itemObj.name[lang]}</PageTitleContainer>
          <div className="item-data">
            <div className="item-photos">
              <div className="item-thumbnails">
@@ -117,7 +116,7 @@ class Item extends React.Component {
               <>
                 <div className="pink-border"/>
                 <div className="item__section-title">{text.dimensions[lang]}</div>
-                <div className="item__section-text">{itemObj.dimensions}</div>
+                <div className="item__section-text">{itemObj.dimensions[lang]}</div>
               </>
              ) : null}
 
