@@ -2,6 +2,10 @@ const bracelets = [
   {
     idString: "bracelets_1",
     id: 700,
+    type: {
+      uk: "Браслет",
+      ru: "Браслет"
+    },
     name: {
       uk: "Золота осінь",
       ru: "Золотая осень"
@@ -27,6 +31,10 @@ const bracelets = [
   {
     idString: "bracelets_2",
     id: 690,
+    type: {
+      uk: "Браслет",
+      ru: "Браслет"
+    },
     name: {
       uk: "Червоне в чорному",
       ru: "Красное в черном"
@@ -54,6 +62,10 @@ const bracelets = [
   {
     idString: "bracelets_3",
     id: 680,
+    type: {
+      uk: "Браслет",
+      ru: "Браслет"
+    },
     name: {
       uk: "Неба блакить",
       ru: "Неба синева"

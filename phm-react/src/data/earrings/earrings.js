@@ -2,6 +2,10 @@ const earrings = [
   {
     idString: "earrings_1",
     id: 600,
+    type: {
+      uk: "Сережки",
+      ru: "Серьги"
+    },
     name: {
       uk: "Ягоди Сходу",
       ru: "Восточная ягода"
@@ -29,6 +33,10 @@ const earrings = [
   {
     idString: "earrings_2",
     id: 590,
+    type: {
+      uk: "Сережки",
+      ru: "Серьги"
+    },
     name: {
       uk: "Гранатовий глінтвейн",
       ru: "Гранатовый глинтвейн"
@@ -58,6 +66,10 @@ const earrings = [
   {
     idString: "earrings_3",
     id: 580,
+    type: {
+      uk: "Сережки для нареченої",
+      ru: "Серьги  для  невесты"
+    },
     name: {
       uk: "Перлинний дотик",
       ru: "Жемчужное прикосновение"
@@ -89,6 +101,10 @@ const earrings = [
   {
     idString: "earrings_4",
     id: 570,
+    type: {
+      uk: "Сережки",
+      ru: "Серьги"
+    },
     name: {
       uk: "Блакитна крапля",
       ru: "Голубая капля"
@@ -116,6 +132,10 @@ const earrings = [
   {
     idString: "earrings_5",
     id: 560,
+    type: {
+      uk: "Сережки",
+      ru: "Серьги"
+    },
     name: {
       uk: "Корзинка перлів",
       ru: "Жемчужная корзинка"
@@ -143,6 +163,10 @@ const earrings = [
   {
     idString: "earrings_6",
     id: 550,
+    type: {
+      uk: "Сережки",
+      ru: "Серьги"
+    },
     name: {
       uk: "Пір‘їнка блакитна плетена",
       ru: "Перышко плетёное синее"
@@ -170,6 +194,10 @@ const earrings = [
   {
     idString: "earrings_7",
     id: 540,
+    type: {
+      uk: "Сережки",
+      ru: "Серьги"
+    },
     name: {
       uk: "Крижані краплинки",
       ru: "Сверкающие льдинки"
@@ -199,6 +227,10 @@ const earrings = [
   {
     idString: "earrings_8",
     id: 530,
+    type: {
+      uk: "Сережки",
+      ru: "Серьги"
+    },
     name: {
       uk: "Кармен",
       ru: "Кармен"
@@ -226,6 +258,10 @@ const earrings = [
   {
     idString: "earrings_9",
     id: 520,
+    type: {
+      uk: "Сережки",
+      ru: "Серьги"
+    },
     name: {
       uk: "Ягідки веселкові",
       ru: "Смородинка  радужная"
