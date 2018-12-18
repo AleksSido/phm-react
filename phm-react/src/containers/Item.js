@@ -71,7 +71,9 @@ class Item extends React.Component {
          <Helmet>
            <title>{text.siteTitle + " - " + itemObj.name[lang]}</title>
          </Helmet>
+
          <PageTitleContainer>{itemObj.name[lang]}</PageTitleContainer>
+
          <div className="item-data">
            <div className="item-photos">
              <div className="item-thumbnails">
@@ -89,14 +91,16 @@ class Item extends React.Component {
            </div>
 
            <div className="item-text">
-             <div className="item__available-and-price">
-               <div className="item__available-and-note">
-                 <div className="item__avialable">{available}</div>
-                 <div className="item__note">{availableNote}</div>
-               </div>
+
+             <div className="item__type-and-price">
+               <div className="item__type">{itemObj.type[lang]}</div>
                <div className="item__price">{itemObj.price + ' ' + text.hryvny}</div>
              </div>
-             <div className="item__categories">{textCategories}</div>
+             <div className="item__available-and-note">
+               <div className="item__avialable">{available}</div>
+               <div className="item__note">{availableNote}</div>
+             </div>
+             {/*<div className="item__categories">{textCategories}</div>*/}
              {itemObj.related ? (
               <>
                 <div className="pink-border"/>

@@ -478,22 +478,29 @@ margin-bottom: 40px;
     justify-content: flex-end;
     padding-top: 10px;
 }
-.item__available-and-price {
+.item__type-and-price {
     display: flex;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+}
+.item__available-and-note {
+    margin-bottom: 22px;
 }
 .item__avialable {
     text-transform: uppercase;
     font-family: 'Comfortaa-Bold';
     font-size: 12px;
-    padding-bottom: 8px;
 }
 .item__note {
     font-size: 12px;
+    padding-top: 8px;
 }
 .item__price {
     margin-left: auto;
+    font-family: 'Comfortaa-Bold';
+    font-size: 19px;
+}
+.item__type {
     font-family: 'Comfortaa-Bold';
     font-size: 19px;
 }
