@@ -290,5 +290,6 @@ const earrings = [
     related: ["beads_3", "collections_4"]
   },
 
+
 ];
 export default earrings;
