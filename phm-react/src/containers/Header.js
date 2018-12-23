@@ -41,7 +41,7 @@ class Header extends React.Component {
               <div className="header-contacts__phone-ico">
                 <SmartphoneSvg/>
               </div>
-              <a href={"tel"+text.tel} className="header-contacts__link">{text.tel}</a>
+              <a href={"tel:"+text.tel} className="header-contacts__link">{text.tel}</a>
             </div>
             <div className="header-contacts__mail">
               <div className="header-contacts__mail-ico">

@@ -58,7 +58,7 @@ class Item extends React.Component {
          key={`item__related-link-${index}`}
          to={`/${lang}/${category}/${relatedLinksItem}/`}
          className="item__related-link">
-         {relatedItem.name[lang]}
+         {relatedItem.name[lang] + ' (' + relatedItem.type[lang] + ')'}
        </NavLink>
      )
    }) : null;
@@ -131,7 +131,7 @@ class Item extends React.Component {
                  <div className="header-contacts__phone-ico">
                    <SmartphoneSvg/>
                  </div>
-                 <a href={"tel"+text.tel} className="header-contacts__link">{text.tel}</a>
+                 <a href={"tel:"+text.tel} className="header-contacts__link">{text.tel}</a>
                </div>
                <div className="header-contacts__mail">
                  <div className="header-contacts__mail-ico">

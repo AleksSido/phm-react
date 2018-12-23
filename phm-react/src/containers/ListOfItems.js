@@ -13,10 +13,10 @@ class ListOfItems extends React.Component{
     this.state = {
       offset: 12,
       count: 0,
-      paginationIsShown: false,
-      links: [],
-      linksToShow: [],
-      pagesNumber: null
+      // paginationIsShown: false,
+      // links: [],
+      // linksToShow: [],
+      // pagesNumber: null
     };
   }
   returnCardLink = (item, index, lang) => {
@@ -67,31 +67,72 @@ class ListOfItems extends React.Component{
       linksToShow = links.slice(fromIndex, toIndex);
       pagesNumber = Math.ceil(links.length/this.state.offset);
     }
-    this.setState({paginationIsShown, links, linksToShow, pagesNumber});
+    // this.setState({paginationIsShown, links, linksToShow, pagesNumber});
   };
-  componentDidMount() {
-    this.handleListOfItems();
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.count !== this.state.count
-    || prevProps.showAll !== this.props.showAll
-    || prevProps.lang !== this.props.lang
-    || prevProps.category !== this.props.category
-    || prevProps.exceptFor !== this.props.exceptFor) {
-      this.handleListOfItems();
-    }
-  }
+  // componentDidMount() {
+  //   this.handleListOfItems();
+  // }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.count !== this.state.count
+  //   || prevProps.showAll !== this.props.showAll
+  //   || prevProps.lang !== this.props.lang
+  //   || prevProps.category !== this.props.category
+  //   || prevProps.exceptFor !== this.props.exceptFor) {
+  //     this.handleListOfItems();
+  //   }
+  // }
   render(){
     const lang = this.props.lang;
     const category = this.props.category;
 
-    const linksToItems = this.state.linksToShow.length ? this.state.linksToShow.map((item, index) => {
+
+    let links = [];
+    if (this.props.showAll) {
+      all.forEach(itemsCategory => {
+        const itemsCategoryLinks = itemsCategory.items.map((item) => {
+          return {...item, categoryString: itemsCategory.idString};
+        });
+        links.push(...itemsCategoryLinks);
+      });
+      links = links.filter(item => !item.sameId);
+    } else {
+      const itemsCategory = all.find(item => {
+        return item.idString === this.props.category
+      });
+      links = itemsCategory.items.map((item) => {
+        return {...item, categoryString: itemsCategory.idString};
+      });
+    }
+
+    links.sort((a, b) => {
+      return b.id - a.id;
+    });
+    if (this.props.exceptFor) {
+      const exceptForIndex = links.findIndex(item => item.idString === this.props.exceptFor);
+      links.splice(exceptForIndex, 1);
+    }
+
+    let linksToShow = [];
+    let paginationIsShown = false;
+    let pagesNumber = null;
+    if (links.length <= this.state.offset) {
+      linksToShow = links;
+    } else {
+      paginationIsShown = true;
+      const fromIndex = this.state.count * this.state.offset;
+      const toIndex = fromIndex + this.state.offset;
+      linksToShow = links.slice(fromIndex, toIndex);
+      pagesNumber = Math.ceil(links.length/this.state.offset);
+    }
+
+
+    const linksToItems = linksToShow.length ? linksToShow.map((item, index) => {
       return this.returnCardLink(item, index, lang);
     }) : null;
 
     let pagination = [];
-    if (this.state.paginationIsShown) {
-      for (let i=0; i < this.state.pagesNumber; i++) {
+    if (paginationIsShown) {
+      for (let i=0; i < pagesNumber; i++) {
         const pageNumberClassName = this.state.count === i ? 'pagination__item pagination__item_active'
           : 'pagination__item';
         const pageNumberLink = this.state.count === i ?
@@ -117,7 +158,7 @@ class ListOfItems extends React.Component{
           <div className="item-cards">
             {linksToItems}
           </div>
-          {this.state.paginationIsShown ? (
+          {paginationIsShown ? (
             <div className="pagination">{pagination}</div>
           ) : null}
 
