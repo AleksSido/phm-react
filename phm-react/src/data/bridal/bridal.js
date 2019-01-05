@@ -10,7 +10,7 @@ const bridal = [
       uk: "Краплинка",
       ru: "Капелька"
     },
-    available: true,
+    available: "SALE",
     price: 200,
     imagesNumber: 6,
     description: {
@@ -43,7 +43,7 @@ const bridal = [
       uk: "Квіточки",
       ru: "Цветочки"
     },
-    available: true,
+    available: "SALE",
     price: 200,
     imagesNumber: 5,
     description: {
@@ -76,7 +76,7 @@ const bridal = [
       uk: "Перлинний дотик",
       ru: "Жемчужное прикосновение"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 50,
     imagesNumber: 5,
     description: {
@@ -111,7 +111,7 @@ const bridal = [
       uk: "Ягідки веселкові",
       ru: "Смородинка  радужная"
     },
-    available: true,
+    available: "SALE",
     price: 200,
     imagesNumber: 4,
     description: {
@@ -146,7 +146,7 @@ const bridal = [
       uk: "Білий танок",
       ru: "Білий танок"
     },
-    available: true,
+    available: "SALE",
     price: 200,
     imagesNumber: 6,
     description: {

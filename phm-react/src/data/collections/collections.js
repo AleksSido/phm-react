@@ -10,7 +10,7 @@ const collections = [
       uk: "Гранатовий глінтвейн",
       ru: "Гранатовый глинтвейн"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 250,
     imagesNumber: 6,
     description: {
@@ -49,7 +49,7 @@ const collections = [
       uk: "Перлинний дотик",
       ru: "Жемчужное прикосновение"
     },
-    available: true,
+    available: "SALE",
     price: 250,
     imagesNumber: 4,
     description: {
@@ -85,7 +85,7 @@ const collections = [
       uk: "Крижане царство",
       ru: "Ледяное царство"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 350,
     imagesNumber: 5,
     description: {
@@ -118,7 +118,7 @@ const collections = [
       uk: "Ягідки веселкові",
       ru: "Смородинка  радужная"
     },
-    available: true,
+    available: "SALE",
     price: 200,
     imagesNumber: 6,
     description: {
@@ -154,7 +154,7 @@ const collections = [
       uk: "Рожева косичка",
       ru: "Розовая косичка"
     },
-    available: true,
+    available: "SALE",
     price: 100,
     imagesNumber: 5,
     description: {
@@ -185,7 +185,7 @@ const collections = [
       uk: "Рожеві дзвіночки",
       ru: "Розовые колокольчики"
     },
-    available: true,
+    available: "SALE",
     price: 180,
     imagesNumber: 5,
     description: {
@@ -218,7 +218,7 @@ const collections = [
       uk: "Синя косичка",
       ru: "Синяя косичка"
     },
-    available: true,
+    available: "SALE",
     price: 180,
     imagesNumber: 5,
     description: {
@@ -249,7 +249,7 @@ const collections = [
       uk: "Традиційний колорит",
       ru: "Традиційний колорит"
     },
-    available: true,
+    available: "SALE",
     price: 300,
     imagesNumber: 6,
     description: {

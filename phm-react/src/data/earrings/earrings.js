@@ -10,7 +10,7 @@ const earrings = [
       uk: "Ягоди Сходу",
       ru: "Восточная ягода"
     },
-    available: true,
+    available: "SALE",
     price: 95,
     imagesNumber: 4,
     description: {
@@ -41,7 +41,7 @@ const earrings = [
       uk: "Гранатовий глінтвейн",
       ru: "Гранатовый глинтвейн"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 50,
     imagesNumber: 3,
     description: {
@@ -74,7 +74,7 @@ const earrings = [
       uk: "Перлинний дотик",
       ru: "Жемчужное прикосновение"
     },
-    available: true,
+    available: "SALE",
     price: 50,
     imagesNumber: 4,
     description: {
@@ -109,7 +109,7 @@ const earrings = [
       uk: "Блакитна крапля",
       ru: "Голубая капля"
     },
-    available: true,
+    available: "SALE",
     price: 50,
     imagesNumber: 4,
     description: {
@@ -140,7 +140,7 @@ const earrings = [
       uk: "Корзинка перлів",
       ru: "Жемчужная корзинка"
     },
-    available: true,
+    available: "SALE",
     price: 95,
     imagesNumber: 4,
     description: {
@@ -171,7 +171,7 @@ const earrings = [
       uk: "Пір‘їнка блакитна плетена",
       ru: "Перышко плетёное синее"
     },
-    available: true,
+    available: "SALE",
     price: 85,
     imagesNumber: 4,
     description: {
@@ -202,7 +202,7 @@ const earrings = [
       uk: "Крижані краплинки",
       ru: "Сверкающие льдинки"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 80,
     imagesNumber: 2,
     description: {
@@ -235,7 +235,7 @@ const earrings = [
       uk: "Кармен",
       ru: "Кармен"
     },
-    available: true,
+    available: "SALE",
     price: 80,
     imagesNumber: 4,
     description: {
@@ -266,7 +266,7 @@ const earrings = [
       uk: "Ягідки веселкові",
       ru: "Смородинка  радужная"
     },
-    available: true,
+    available: "SALE",
     price: 50,
     imagesNumber: 4,
     description: {

@@ -10,7 +10,7 @@ const handmade = [
       uk: "Маленькі букети",
       ru: "Мелкие букеты"
     },
-    available: true,
+    available: "SALE",
     price: 100,
     imagesNumber: 11,
     description: {
@@ -37,7 +37,7 @@ const handmade = [
       uk: "Фіалки",
       ru: "Фиалки"
     },
-    available: true,
+    available: "SALE",
     price: 100,
     imagesNumber: 4,
     description: {
@@ -64,7 +64,7 @@ const handmade = [
       uk: "Слоненятко  Сінті",
       ru: "Слоняшечка  Синти"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 100,
     imagesNumber: 4,
     description: {
@@ -97,7 +97,7 @@ const handmade = [
       uk: "Поросятко",
       ru: "Хрюшечка"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 100,
     imagesNumber: 4,
     description: {
@@ -126,7 +126,7 @@ const handmade = [
       uk: "Мітенки",
       ru: "Митенки"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 100,
     imagesNumber: 4,
     description: {

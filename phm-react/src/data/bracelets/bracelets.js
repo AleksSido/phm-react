@@ -10,7 +10,7 @@ const bracelets = [
       uk: "Золота осінь",
       ru: "Золотая осень"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 50,
     imagesNumber: 3,
     description: {
@@ -39,7 +39,7 @@ const bracelets = [
       uk: "Червоне в чорному",
       ru: "Красное в черном"
     },
-    available: true,
+    available: "SALE",
     price: 50,
     imagesNumber: 4,
     description: {
@@ -70,7 +70,7 @@ const bracelets = [
       uk: "Неба блакить",
       ru: "Неба синева"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 50,
     imagesNumber: 3,
     description: {

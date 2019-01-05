@@ -18,8 +18,9 @@ class ItemCard extends React.Component {
                        src={require(`./../assets/img/thumbnails_with_logo/${this.props.item.categoryString}/${this.props.item.idString}/${this.props.item.idString}_${i}.jpg`)}
                        alt={this.props.item.name[this.props.lang]} className="ItemCard__img"/>);
     }
-    const available = this.props.item.available ? text.isAvailable[this.props.lang] : text.isNotAvailable[this.props.lang];
-    const availableNote = this.props.item.available ? null : text.isNotAvailableNote[this.props.lang];
+    const available = text.available[this.props.item.available][this.props.lang];
+    const availableNote = (this.props.item.available === "ORDER"
+      || this.props.item.available === "EXAMPLE") ? text.isNotAvailableNote[this.props.lang] : null;
     const categories = this.props.item.addCategories ? [...this.props.item.addCategories, this.props.item.categoryString]
       : [this.props.item.categoryString];
     const textCategories = categories.map((item, index) => {

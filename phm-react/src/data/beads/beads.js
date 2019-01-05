@@ -10,7 +10,7 @@ const beads = [
       uk: "Крижане царство",
       ru: "Ледяное царство"
     },
-    available: true,
+    available: "SALE",
     price: 300,
     imagesNumber: 4,
     description: {
@@ -43,7 +43,7 @@ const beads = [
       uk: "Рожева ніжність",
       ru: "Розовая нежность"
     },
-    available: true,
+    available: "SALE",
     price: 180,
     imagesNumber: 4,
     description: {
@@ -72,7 +72,7 @@ const beads = [
       uk: "Ягідки веселкові",
       ru: "Смородинка радужная"
     },
-    available: true,
+    available: "SALE",
     price: 150,
     imagesNumber: 5,
     description: {
@@ -107,7 +107,7 @@ const beads = [
       uk: "Червоне та чорне",
       ru: "Красное и черное"
     },
-    available: true,
+    available: "SALE",
     price: 500,
     imagesNumber: 5,
     description: {
@@ -138,7 +138,7 @@ const beads = [
       uk: "Перлинний дотик",
       ru: "Жемчужное прикосновение"
     },
-    available: true,
+    available: "SALE",
     price: 200,
     imagesNumber: 4,
     description: {
@@ -173,7 +173,7 @@ const beads = [
       uk: "Перлинне розмаїття",
       ru: "Жемчужная россыпь"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 250,
     imagesNumber: 4,
     description: {
@@ -206,7 +206,7 @@ const beads = [
       uk: "Гранатовий глінтвейн",
       ru: "Гранатовый глинтвейн"
     },
-    available: true,
+    available: "SALE",
     price: 400,
     imagesNumber: 5,
     description: {
@@ -243,7 +243,7 @@ const beads = [
       uk: "Морська блакить",
       ru: "Морская лазурь"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 250,
     imagesNumber: 3,
     description: {
@@ -272,7 +272,7 @@ const beads = [
       uk: "Фантазія в спокійних тонах",
       ru: "Фантазия в спокойных тонах"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 200,
     imagesNumber: 3,
     description: {
@@ -301,7 +301,7 @@ const beads = [
       uk: "Фіалкове розмаїття",
       ru: "Фиалковая россыпь"
     },
-    available: false,
+    available: "EXAMPLE",
     price: 200,
     imagesNumber: 4,
     description: {
@@ -330,7 +330,7 @@ const beads = [
       uk: "Аметистовий полон",
       ru: "Аметистовый плен"
     },
-    available: true,
+    available: "SALE",
     price: 180,
     imagesNumber: 5,
     description: {
@@ -361,7 +361,7 @@ const beads = [
       uk: "Біла течія в червоному",
       ru: "Белое течение в красном"
     },
-    available: true,
+    available: "SALE",
     price: 150,
     imagesNumber: 5,
     description: {
@@ -392,7 +392,7 @@ const beads = [
       uk: "Велика намистина в синьому",
       ru: "Большая бусина в синем"
     },
-    available: true,
+    available: "SALE",
     price: 120,
     imagesNumber: 5,
     description: {
@@ -425,7 +425,7 @@ const beads = [
       uk: "Велика намистина в чорному",
       ru: "Большая бусина в черном"
     },
-    available: true,
+    available: "SALE",
     price: 120,
     imagesNumber: 6,
     description: {
@@ -458,7 +458,7 @@ const beads = [
       uk: "Перлинні гойдалки",
       ru: "Жемчужные качели"
     },
-    available: true,
+    available: "SALE",
     price: 150,
     imagesNumber: 4,
     description: {
@@ -489,7 +489,7 @@ const beads = [
       uk: "Золото в чорному",
       ru: "Золото в черном"
     },
-    available: true,
+    available: "SALE",
     price: 150,
     imagesNumber: 5,
     description: {
@@ -520,7 +520,7 @@ const beads = [
       uk: "Червоне і чорне",
       ru: "Красное и черное"
     },
-    available: true,
+    available: "SALE",
     price: 150,
     imagesNumber: 5,
     description: {
@@ -551,7 +551,7 @@ const beads = [
       uk: "Перли та корали",
       ru: "Жемчуг и коралл"
     },
-    available: true,
+    available: "SALE",
     price: 200,
     imagesNumber: 5,
     description: {
@@ -582,7 +582,7 @@ const beads = [
       uk: "Червона троянда",
       ru: "Красная роза"
     },
-    available: true,
+    available: "SALE",
     price: 150,
     imagesNumber: 5,
     description: {
@@ -613,7 +613,7 @@ const beads = [
       uk: "Срібло в чорному",
       ru: "Серебро в черном"
     },
-    available: true,
+    available: "SALE",
     price: 150,
     imagesNumber: 5,
     description: {
@@ -644,7 +644,7 @@ const beads = [
       uk: "Сині намистини з білим",
       ru: "Синие бусины с белым"
     },
-    available: true,
+    available: "SALE",
     price: 100,
     imagesNumber: 5,
     description: {
@@ -675,7 +675,7 @@ const beads = [
       uk: "Три в одній",
       ru: "Три в одной"
     },
-    available: true,
+    available: "SALE",
     price: 100,
     imagesNumber: 5,
     description: {
@@ -706,7 +706,7 @@ const beads = [
       uk: "Аметистовий полон",
       ru: "Сиреневый туман"
     },
-    available: true,
+    available: "SALE",
     price: 180,
     imagesNumber: 5,
     description: {
@@ -737,7 +737,7 @@ const beads = [
       uk: "Сердечко с розой",
       ru: "Сердечко с розой"
     },
-    available: true,
+    available: "SALE",
     price: 200,
     imagesNumber: 6,
     description: {
@@ -768,7 +768,7 @@ const beads = [
       uk: "Білий танок",
       ru: "Білий танок"
     },
-    available: true,
+    available: "SALE",
     price: 200,
     imagesNumber: 6,
     description: {
@@ -801,7 +801,7 @@ const beads = [
       uk: "Бузкова заметіль",
       ru: "Бузкова заметіль"
     },
-    available: true,
+    available: "SALE",
     price: 450,
     imagesNumber: 6,
     description: {
@@ -832,7 +832,7 @@ const beads = [
       uk: "Коралове мереживо",
       ru: "Коралове мереживо"
     },
-    available: true,
+    available: "SALE",
     price: 500,
     imagesNumber: 7,
     description: {
@@ -865,7 +865,7 @@ const beads = [
       uk: "Смарагдова палітра",
       ru: "Смарагдова палітра"
     },
-    available: true,
+    available: "SALE",
     price: 350,
     imagesNumber: 5,
     description: {
@@ -894,7 +894,7 @@ const beads = [
       uk: "Таємниці долини Чари",
       ru: "Таємниці долини Чари"
     },
-    available: true,
+    available: "SALE",
     price: 450,
     imagesNumber: 6,
     description: {
@@ -926,7 +926,7 @@ const beads = [
       uk: "Біло-чорна спіраль",
       ru: "Біло-чорна спіраль"
     },
-    available: true,
+    available: "EXAMPLE",
     price: 300,
     imagesNumber: 6,
     description: {
@@ -955,7 +955,7 @@ const beads = [
       uk: "Кришталевий водограй",
       ru: "Кришталевий водограй"
     },
-    available: true,
+    available: "ORDER",
     price: 450,
     imagesNumber: 6,
     description: {
