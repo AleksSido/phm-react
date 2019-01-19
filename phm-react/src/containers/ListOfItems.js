@@ -11,12 +11,9 @@ class ListOfItems extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      offset: 12,
+      offset: 1000,
       count: 0,
-      // paginationIsShown: false,
-      // links: [],
-      // linksToShow: [],
-      // pagesNumber: null
+      offsetIsSet: false
     };
   }
   returnCardLink = (item, index, lang) => {
@@ -28,59 +25,28 @@ class ListOfItems extends React.Component{
       </NavLink>
     )
   };
-  handleListOfItems = () => {
-    let links = [];
-    if (this.props.showAll) {
-      all.forEach(itemsCategory => {
-        const itemsCategoryLinks = itemsCategory.items.map((item) => {
-          return {...item, categoryString: itemsCategory.idString};
-        });
-        links.push(...itemsCategoryLinks);
-      });
-      links = links.filter(item => !item.sameId);
-    } else {
-      const itemsCategory = all.find(item => {
-        return item.idString === this.props.category
-      });
-      links = itemsCategory.items.map((item) => {
-        return {...item, categoryString: itemsCategory.idString};
-      });
-    }
-
-    links.sort((a, b) => {
-      return b.id - a.id;
+  scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
     });
-    if (this.props.exceptFor) {
-      const exceptForIndex = links.findIndex(item => item.idString === this.props.exceptFor);
-      links.splice(exceptForIndex, 1);
-    }
-
-    let linksToShow = [];
-    let paginationIsShown = false;
-    let pagesNumber = null;
-    if (links.length <= this.state.offset) {
-      linksToShow = links;
-    } else {
-      paginationIsShown = true;
-      const fromIndex = this.state.count * this.state.offset;
-      const toIndex = fromIndex + this.state.offset;
-      linksToShow = links.slice(fromIndex, toIndex);
-      pagesNumber = Math.ceil(links.length/this.state.offset);
-    }
-    // this.setState({paginationIsShown, links, linksToShow, pagesNumber});
   };
-  // componentDidMount() {
-  //   this.handleListOfItems();
-  // }
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevState.count !== this.state.count
-  //   || prevProps.showAll !== this.props.showAll
-  //   || prevProps.lang !== this.props.lang
-  //   || prevProps.category !== this.props.category
-  //   || prevProps.exceptFor !== this.props.exceptFor) {
-  //     this.handleListOfItems();
-  //   }
-  // }
+  setOffset = () => {
+    if (!this.state.offsetIsSet) {
+      this.setState({
+        offset: 12,
+        offsetIsSet: true
+      });
+    }
+  };
+  componentDidUpdate(){
+    this.setOffset();
+    this.scrollToTop();
+  };
+  componentDidMount(){
+    this.setOffset();
+    this.scrollToTop();
+  }
   render(){
     const lang = this.props.lang;
     const category = this.props.category;

@@ -10,7 +10,7 @@ const collections = [
       uk: "Гранатовий глінтвейн",
       ru: "Гранатовый глинтвейн"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 250,
     imagesNumber: 6,
     description: {
@@ -85,7 +85,7 @@ const collections = [
       uk: "Крижане царство",
       ru: "Ледяное царство"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 350,
     imagesNumber: 5,
     description: {

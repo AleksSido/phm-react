@@ -46,10 +46,6 @@ const text = {
     ORDER: {
       uk: 'На замовлення',
       ru: 'На заказ'
-    },
-    EXAMPLE: {
-      uk: 'Для прикладу',
-      ru: 'Для примера'
     }
   },
   isNotAvailableNote: {

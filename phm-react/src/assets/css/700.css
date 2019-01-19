@@ -13,9 +13,10 @@
     }
 
     .logo {
-        display:  block;
+        /*display:  block;*/
         height: 10%;
         width: 20%;
+        margin: unset;
     }
 
     .header-title-and-motto {
@@ -23,6 +24,7 @@
     }
 
     .header-link-get__container {
+        text-align: right;
         width: 16%;
         margin-bottom: 0;
     }
@@ -59,6 +61,7 @@
 
     .header-title {
         margin-bottom: 6px;
+        font-size: 56px;
     }
     .item-cards {
         margin: 0 -9px;

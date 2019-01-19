@@ -41,7 +41,7 @@ const earrings = [
       uk: "Гранатовий глінтвейн",
       ru: "Гранатовый глинтвейн"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 50,
     imagesNumber: 3,
     description: {
@@ -202,7 +202,7 @@ const earrings = [
       uk: "Крижані краплинки",
       ru: "Сверкающие льдинки"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 80,
     imagesNumber: 2,
     description: {

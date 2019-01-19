@@ -76,7 +76,7 @@ const bridal = [
       uk: "Перлинний дотик",
       ru: "Жемчужное прикосновение"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 50,
     imagesNumber: 5,
     description: {

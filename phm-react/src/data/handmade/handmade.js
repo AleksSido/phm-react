@@ -64,7 +64,7 @@ const handmade = [
       uk: "Слоненятко  Сінті",
       ru: "Слоняшечка  Синти"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 100,
     imagesNumber: 4,
     description: {
@@ -97,7 +97,7 @@ const handmade = [
       uk: "Поросятко",
       ru: "Хрюшечка"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 100,
     imagesNumber: 4,
     description: {
@@ -126,7 +126,7 @@ const handmade = [
       uk: "Мітенки",
       ru: "Митенки"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 100,
     imagesNumber: 4,
     description: {

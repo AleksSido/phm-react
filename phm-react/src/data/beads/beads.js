@@ -173,7 +173,7 @@ const beads = [
       uk: "Перлинне розмаїття",
       ru: "Жемчужная россыпь"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 250,
     imagesNumber: 4,
     description: {
@@ -243,7 +243,7 @@ const beads = [
       uk: "Морська блакить",
       ru: "Морская лазурь"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 250,
     imagesNumber: 3,
     description: {
@@ -272,7 +272,7 @@ const beads = [
       uk: "Фантазія в спокійних тонах",
       ru: "Фантазия в спокойных тонах"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 200,
     imagesNumber: 3,
     description: {
@@ -301,7 +301,7 @@ const beads = [
       uk: "Фіалкове розмаїття",
       ru: "Фиалковая россыпь"
     },
-    available: "EXAMPLE",
+    available: "ORDER",
     price: 200,
     imagesNumber: 4,
     description: {
@@ -926,7 +926,7 @@ const beads = [
       uk: "Біло-чорна спіраль",
       ru: "Біло-чорна спіраль"
     },
-    available: "EXAMPLE",
+    available: "SALE",
     price: 300,
     imagesNumber: 6,
     description: {

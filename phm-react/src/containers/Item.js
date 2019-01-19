@@ -4,12 +4,11 @@ import {Helmet} from "react-helmet";
 import PageTitleContainer from "../components/PageTitleContainer";
 import text from "../data/text";
 import Slider from "react-slick";
-import SmartphoneSvg from "../svg-components/SmartphoneSvg";
-import MailSvg from "../svg-components/MailSvg";
 import FacebookSvg from "../svg-components/FacebookSvg";
 import TwitterSvg from "../svg-components/TwitterSvg";
 import PinterestSvg from "../svg-components/PinterestSvg";
 import {NavLink} from "react-router-dom";
+import HeaderContacts from "../components/HeaderContacts";
 
 class Item extends React.Component {
   handlePrev = (e) => {
@@ -20,6 +19,18 @@ class Item extends React.Component {
     e.preventDefault();
     this.slider.slickNext();
   };
+  scrollToTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  componentDidUpdate(){
+    this.scrollToTop();
+  };
+  componentDidMount(){
+    this.scrollToTop();
+  }
  render(){
    const lang = this.props.lang;
    const category = this.props.category;
@@ -44,12 +55,11 @@ class Item extends React.Component {
      photos.push(photo);
    }
    const available = text.available[itemObj.available][lang];
-   const availableNote = (itemObj.available === "ORDER"
-     || itemObj.available === "EXAMPLE") ? text.isNotAvailableNote[lang] : null;
-   const categories = itemObj.addCategories ? [category, ...itemObj.addCategories] : [category];
-   const textCategories = categories.map((item, index) => {
-     return (<span key={item + index}>{text[item][lang]}</span>);
-   });
+   const availableNote = itemObj.available === "ORDER" ? text.isNotAvailableNote[lang] : null;
+   // const categories = itemObj.addCategories ? [category, ...itemObj.addCategories] : [category];
+   // const textCategories = categories.map((item, index) => {
+   //   return (<span key={item + index}>{text[item][lang]}</span>);
+   // });
    const relatedLinks = itemObj.related ? itemObj.related.map((relatedLinksItem,index)=> {
      const category = relatedLinksItem.split('_')[0];
      const categoryArr = all.find(item => item.idString === category);
@@ -128,18 +138,7 @@ class Item extends React.Component {
              <div className="pink-border"/>
              <div className="item__section-title">{text.orderItem[lang]}</div>
              <div className="item__buy-contacts">
-               <div className="header-contacts__phone">
-                 <div className="header-contacts__phone-ico">
-                   <SmartphoneSvg/>
-                 </div>
-                 <a href={"tel:"+text.tel} className="header-contacts__link">{text.tel}</a>
-               </div>
-               <div className="header-contacts__mail">
-                 <div className="header-contacts__mail-ico">
-                   <MailSvg/>
-                 </div>
-                 <a href={"mailto:"+text.mail} className="header-contacts__link">{text.mail}</a>
-               </div>
+               <HeaderContacts/>
              </div>
              <div className="pink-border"/>
              <div className="item__share-btns">

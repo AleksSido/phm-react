@@ -2,9 +2,8 @@ import * as React from 'react';
 import all from "../data/all";
 import {NavLink} from "react-router-dom";
 import LogoSvg from "../svg-components/LogoSvg";
-import SmartphoneSvg from "../svg-components/SmartphoneSvg";
-import MailSvg from "../svg-components/MailSvg";
 import text from "../data/text";
+import HeaderContacts from "../components/HeaderContacts";
 
 class Header extends React.Component {
   constructor(props){
@@ -19,6 +18,7 @@ class Header extends React.Component {
   hideMobileMenu = () => {
     this.setState({mobileMenuIsShown: false});
   };
+
   render(){
     const langLinkString = this.props.lang === 'uk' ? 'ru' : 'uk';
     const langLink = this.props.currentLocation === '/' ? '/' + langLinkString + '/'
@@ -37,18 +37,7 @@ class Header extends React.Component {
       <header className="header">
         <div className="header-row">
           <div className="header-contacts">
-            <div className="header-contacts__phone">
-              <div className="header-contacts__phone-ico">
-                <SmartphoneSvg/>
-              </div>
-              <a href={"tel:"+text.tel} className="header-contacts__link">{text.tel}</a>
-            </div>
-            <div className="header-contacts__mail">
-              <div className="header-contacts__mail-ico">
-                <MailSvg/>
-              </div>
-              <a href={"mailto:"+text.mail} className="header-contacts__link">{text.mail}</a>
-            </div>
+            <HeaderContacts/>
           </div>
           <div className="header-lang">
             <NavLink className="header-lang__link" to={langLink}>{langLinkString}</NavLink>
