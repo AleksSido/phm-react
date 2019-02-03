@@ -76,11 +76,18 @@ class Item extends React.Component {
    const description = itemObj.description[lang].map((item, index)=> {
      return (<div key={`${item}-desc-${index}`} className="item__section-text">{item}</div>)
    });
+   const itemUrlToShare = lang + "/" + category + "/" + itemObj.idString + "/";
+   const imgUrlToShare = require(`./../assets/img/fullsize_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_1.jpg`);
+   const itemTitle = itemObj.type[lang] + ' "' + itemObj.name[lang] + '"';
    return (
 
        <>
          <Helmet>
-           <title>{text.siteTitle + " - " + itemObj.name[lang]}</title>
+           <title>{text.siteTitle + ' - '  + itemTitle}</title>
+           <meta property="og:url"           content={`http://prykrasy-hm.com.ua/${itemUrlToShare}`} />
+           <meta property="og:type"          content="website" />
+           <meta property="og:title"         content={`${text.siteTitle} - ${itemTitle}`} />
+           <meta property="og:image"         content={`http://prykrasy-hm.com.ua/${imgUrlToShare}`} />
          </Helmet>
 
          <PageTitleContainer>{itemObj.name[lang]}</PageTitleContainer>
@@ -138,13 +145,24 @@ class Item extends React.Component {
              <div className="pink-border"/>
              <div className="item__section-title">{text.orderItem[lang]}</div>
              <div className="item__buy-contacts">
-               <HeaderContacts/>
+               <HeaderContacts lang={lang}/>
              </div>
              <div className="pink-border"/>
              <div className="item__share-btns">
-               <a href="" className="item__share-btn"><FacebookSvg/></a>
-               <a href="" className="item__share-btn"><PinterestSvg/></a>
-               <a href="" className="item__share-btn"><TwitterSvg/></a>
+               <a href={"https://www.facebook.com/sharer/sharer.php?u=http://prykrasy-hm.com.ua/"
+               + itemUrlToShare}
+                  target="_blank"
+                  className="item__share-btn"><FacebookSvg/></a>
+               <a href={"https://pinterest.com/pin/create/button/?url=http://prykrasy-hm.com.ua/"
+               + itemUrlToShare
+               + "&media=http://prykrasy-hm.com.ua/"
+               + imgUrlToShare
+               + "&description=" + itemTitle}
+                  target="_blank"
+                  className="item__share-btn"><PinterestSvg/></a>
+               <a href={"https://twitter.com/home?status=http%3A//prykrasy-hm.com.ua/" + itemUrlToShare}
+                  target="_blank"
+                  className="item__share-btn"><TwitterSvg/></a>
              </div>
            </div>
          </div>

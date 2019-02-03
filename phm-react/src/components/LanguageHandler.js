@@ -5,12 +5,17 @@ import {Helmet} from "react-helmet";
 import HowToBuy from "./HowToBuy";
 import Page from "./Page";
 import text from "../data/text";
+import ReactGA from "react-ga";
 
 const LanguageHandler = (props) => {
   const lang = props.match.params.lang ? props.match.params.lang : 'uk';
   const category = props.match.params.category ? props.match.params.category : 'all';
   const item = props.match.params.item ? props.match.params.item : false;
   const showAll = category === 'all';
+
+  if (process.env.NODE_ENV === 'production') {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
   if (category === 'how-to-buy') {
     return (
@@ -21,6 +26,7 @@ const LanguageHandler = (props) => {
   }
   return (<>
     <Helmet>
+      <meta name="description" content={text.metaDescription[lang]}/>
       <title>{text.siteTitle}</title>
     </Helmet>
     <Page lang={lang} currentLocation={props.location.pathname}>

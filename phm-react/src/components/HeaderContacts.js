@@ -3,6 +3,8 @@ import SmartphoneSvg from "../svg-components/SmartphoneSvg";
 import text from "../data/text";
 import CopySvg from "../svg-components/CopySvg";
 import MailSvg from "../svg-components/MailSvg";
+import FbContactSvg from "../svg-components/FbContactSvg";
+import FacebookSvg from "../svg-components/FacebookSvg";
 
 class HeaderContacts extends React.Component {
   constructor(props){
@@ -51,6 +53,15 @@ class HeaderContacts extends React.Component {
             <CopySvg/>
           </div>
         </div>
+        <div className="header-contacts__fb">
+          <div className="header-contacts__fb-ico">
+            <FacebookSvg/>
+          </div>
+          <a href="https://m.me/prykrasyHm" className="header-contacts__link" target="_blank">
+            {text.contactOnFb[this.props.lang]}
+          </a>
+        </div>
+
       </>
     );
   }

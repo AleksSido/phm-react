@@ -37,7 +37,7 @@ class Header extends React.Component {
       <header className="header">
         <div className="header-row">
           <div className="header-contacts">
-            <HeaderContacts/>
+            <HeaderContacts lang={this.props.lang}/>
           </div>
           <div className="header-lang">
             <NavLink className="header-lang__link" to={langLink}>{langLinkString}</NavLink>

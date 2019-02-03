@@ -26,7 +26,7 @@ const Footer = (props) => {
         <NavLink to={`/${props.lang}/how-to-buy/`}>{text.howToBuy[props.lang]}</NavLink>
       </div>
       <div className="footer__contacts">
-       <HeaderContacts/>
+       <HeaderContacts lang={props.lang}/>
       </div>
       <div className="social-contacts">
         <a href={"https://www.facebook.com/prykrasyHm"} target="_blank" className="social-contacts__item">
