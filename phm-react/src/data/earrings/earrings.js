@@ -266,7 +266,7 @@ const earrings = [
       ru: "Любимый аромат"
     },
     available: "SALE",
-    price: 150,
+    price: 120,
     imagesNumber: 5,
     description: {
       uk: [
@@ -844,14 +844,14 @@ const earrings = [
     description: {
       uk: [
         "",
-        "",
-        ""
-
+        "",  
+		""
+		
       ],
       ru: [
         "",
         "",
-        ""
+		""
       ]
     },
     dimensions: {
