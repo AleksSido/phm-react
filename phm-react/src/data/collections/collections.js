@@ -566,8 +566,8 @@ const collections = [
       ru: "Колье, серьги и браслет"
     },
     name: {
-      uk: "Ландыши",
-      ru: "Конвалії"
+      uk: "Конвалії",
+      ru: "Ландыши"
     },
     available: "SALE",
     price: 400,
