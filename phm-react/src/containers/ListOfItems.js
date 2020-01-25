@@ -11,7 +11,7 @@ class ListOfItems extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      offset: 1000,
+      offset: 12,
       count: 0,
       offsetIsSet: false
     };
