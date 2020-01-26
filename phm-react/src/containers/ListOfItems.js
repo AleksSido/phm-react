@@ -32,9 +32,10 @@ class ListOfItems extends React.Component{
     });
   };
   setOffset = () => {
+    const offsetAdaptiveValue = window.innerWidth > 767 ? 12 : 8;
     if (!this.state.offsetIsSet) {
       this.setState({
-        offset: 12,
+        offset: offsetAdaptiveValue,
         offsetIsSet: true
       });
     }

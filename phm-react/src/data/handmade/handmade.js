@@ -1119,12 +1119,12 @@ const handmade = [
     idString: "handmade_41",
     id: 318,
     type: {
-      uk: "Пояс-корсет червоний",
-      ru: "Пояс-корсет красный"
-    },
-    name: {
       uk: "",
       ru: ""
+    },
+    name: {
+      uk: "Пояс-корсет червоний",
+      ru: "Пояс-корсет красный"
     },
     available: "SALE",
     price: 300,

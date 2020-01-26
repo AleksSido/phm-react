@@ -357,7 +357,7 @@ margin-bottom: 40px;
 .ItemCard__link {
     width: 278px;
     display: block;
-    margin: 9px;
+    margin: 9px 9px 27px;
 }
 .ItemCard__available-and-controls {
     position: relative;
@@ -504,6 +504,8 @@ margin-bottom: 40px;
     display: flex;
     justify-content: center;
     padding-top: 45px;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 .pagination__item {
     display: flex;
