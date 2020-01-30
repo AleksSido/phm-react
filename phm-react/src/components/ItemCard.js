@@ -14,9 +14,13 @@ class ItemCard extends React.Component {
   render(){
     let images = [];
     for (let i=1; i < (this.props.item.imagesNumber+1); i++) {
-      images.push(<img key={this.props.item.idString + '_' + i}
-                       src={require(`./../assets/img/thumbnails_with_logo/${this.props.item.categoryString}/${this.props.item.idString}/${this.props.item.idString}_${i}.jpg`)}
-                       alt={this.props.item.name[this.props.lang]} className="ItemCard__img"/>);
+      images.push(
+        <picture>
+          <source srcSet={require(`./../assets/img/thumbnails_with_logo/${this.props.item.categoryString}/${this.props.item.idString}/${this.props.item.idString}_${i}.webp`)}/>
+          <img key={this.props.item.idString + '_' + i}
+               src={require(`./../assets/img/thumbnails_with_logo/${this.props.item.categoryString}/${this.props.item.idString}/${this.props.item.idString}_${i}.jpg`)}
+               alt={this.props.item.name[this.props.lang]} className="ItemCard__img"/>
+        </picture>);
     }
 
     const available = text.available[this.props.item.available][this.props.lang];

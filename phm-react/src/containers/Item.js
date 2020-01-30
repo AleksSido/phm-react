@@ -42,13 +42,23 @@ class Item extends React.Component {
    let photos = [];
    for (let i=0; i < itemObj.imagesNumber; i++) {
      const thumbSrc = require(`./../assets/img/thumbnails_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_${i+1}.jpg`);
+     const thumbWebpSrc = require(`./../assets/img/thumbnails_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_${i+1}.webp`);
      const photoSrc = require(`./../assets/img/fullsize_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_${i+1}.jpg`);
-     const thumbnail = (<div key={`item-${i}`} className="item-thumbnails__img-container" onClick={()=>{this.slider.slickGoTo(i)}}>
-         <img className="item-thumbnails__img" src={thumbSrc} alt={itemObj.name[lang]} />
+     const photoWebpSrc = require(`./../assets/img/fullsize_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_${i+1}.webp`);
+     const thumbnail = (
+       <div key={`item-${i}`} className="item-thumbnails__img-container" onClick={()=>{this.slider.slickGoTo(i)}}>
+         <picture>
+           <source srcSet={thumbWebpSrc}/>
+           <img className="item-thumbnails__img" src={thumbSrc} alt={itemObj.name[lang]} />
+         </picture>
        </div>
        );
-     const photo = (<div key={`item-photo-${i}`} className="item-slider__photo-container">
-         <img className="item-slider__photo" src={photoSrc} alt={itemObj.name[lang]} />
+     const photo = (
+       <div key={`item-photo-${i}`} className="item-slider__photo-container">
+         <picture>
+           <source srcSet={photoWebpSrc}/>
+           <img className="item-slider__photo" src={photoSrc} alt={itemObj.name[lang]} />
+         </picture>
        </div>
      );
      thumbnails.push(thumbnail);
