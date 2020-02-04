@@ -269,7 +269,7 @@ const collections = [
   },
   {
     idString: "collections_9",
-    id: 241,
+    id: 329,
     type: {
       uk: "Колье та сережки",
       ru: "Колье и серьги"
@@ -279,7 +279,7 @@ const collections = [
       ru: "Анжелика"
     },
     available: "SALE",
-    price: 400,
+    price: 350,
     imagesNumber: 6,
     description: {
       uk: [
@@ -492,7 +492,7 @@ const collections = [
 },	
 	{
     idString: "collections_16",
-    id: 258,
+    id: 326,
     type: {
       uk: "Кольє та сережки для нареченої",
       ru: "Колье и серьги для невесты"
@@ -502,7 +502,7 @@ const collections = [
       ru: "Жемчужное очарование"
     },
     available: "SALE",
-    price: 700,
+    price: 550,
     imagesNumber: 7,
     description: {
       uk: [

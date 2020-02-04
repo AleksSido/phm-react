@@ -146,7 +146,7 @@ const bridal = [
       ru: "Білий танок"
     },
     available: "SALE",
-    price: 400,
+    price: 300,
     imagesNumber: 6,
     description: {
       uk: [
@@ -180,7 +180,7 @@ const bridal = [
       ru: "Анжелика"
     },
     available: "SALE",
-    price: 400,
+    price: 350,
     imagesNumber: 6,
     description: {
       uk: [
@@ -340,7 +340,7 @@ const bridal = [
       ru: "Жемчужное очарование"
     },
     available: "SALE",
-    price: 700,
+    price: 550,
     imagesNumber: 7,
     description: {
       uk: [
