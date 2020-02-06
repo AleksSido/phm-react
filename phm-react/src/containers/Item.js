@@ -108,7 +108,7 @@ class Item extends React.Component {
                {thumbnails}
              </div>
              <div className="item-slider">
-               <Slider ref={c => (this.slider = c)} >
+               <Slider lazyLoad={'progressive'} ref={c => (this.slider = c)} >
                  {photos}
                </Slider>
              </div>

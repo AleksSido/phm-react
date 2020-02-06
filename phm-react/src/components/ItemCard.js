@@ -34,7 +34,7 @@ class ItemCard extends React.Component {
     return (
       <div className="ItemCard">
         <div className="ItemCard__img-container">
-          <Slider ref={c => (this.slider = c)}>
+          <Slider lazyLoad={'ondemand'} ref={c => (this.slider = c)}>
             {images}
           </Slider>
         </div>
