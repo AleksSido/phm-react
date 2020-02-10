@@ -88,6 +88,10 @@
     .item-thumbnails {
         display: flex;
     }
+    .footer-link-get__item {
+        margin: 0 10px;
+        display: inline;
+    }
 }
 @media (min-width: 1000px) {
     .item-data {

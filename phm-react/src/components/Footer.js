@@ -23,7 +23,8 @@ const Footer = (props) => {
         {menuCategories}
       </nav>
       <div className="footer-link-get__container">
-        <NavLink to={`/${props.lang}/how-to-buy/`}>{text.howToBuy[props.lang]}</NavLink>
+        <NavLink to={`/${props.lang}/how-to-buy/`} className={'footer-link-get__item'}>{text.howToBuy[props.lang]}</NavLink>
+        <NavLink to={`/${props.lang}/reasons-to-buy/`}  className={'footer-link-get__item'}>{text.reasonsToBuy.linkLabel[props.lang]}</NavLink>
       </div>
       <div className="footer__contacts">
        <HeaderContacts lang={props.lang}/>

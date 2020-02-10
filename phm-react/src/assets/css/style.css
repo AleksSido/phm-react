@@ -713,3 +713,7 @@ margin-bottom: 40px;
 .HowToBuy__note {
     font-style: italic;
 }
+.footer-link-get__item {
+    margin-bottom: 10px;
+    display: block;
+}

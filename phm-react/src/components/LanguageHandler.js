@@ -6,6 +6,7 @@ import HowToBuy from "./HowToBuy";
 import Page from "./Page";
 import text from "../data/text";
 import ReactGA from "react-ga";
+import Reasons from "./Reasons";
 
 const LanguageHandler = (props) => {
   const lang = props.match.params.lang ? props.match.params.lang : 'uk';
@@ -21,6 +22,13 @@ const LanguageHandler = (props) => {
     return (
       <Page lang={lang} currentLocation={props.location.pathname}>
         <HowToBuy lang={lang}/>
+      </Page>
+      );
+  }
+  if (category === 'reasons-to-buy') {
+    return (
+      <Page lang={lang} currentLocation={props.location.pathname}>
+        <Reasons lang={lang}/>
       </Page>
       );
   }
