@@ -88,7 +88,9 @@ img{
 /**   FOR HEADER   */
 /***********************/
 
-
+.header {
+    margin-bottom: 24px;
+}
 
 .header-contacts {
     display:  flex;
@@ -242,8 +244,11 @@ img{
     font-family: 'Comfortaa-Bold';
     display:  block;
     font-size: 14px;
-    margin-bottom: 16px;
+    /*margin-bottom: 16px;*/
     text-align:  center;
+    margin: 0 30px 16px;
+    color: #f6a3c7;
+    text-decoration: underline;
 }
 .nav__link.nav__link_active {
     color: #f6a3c7;
@@ -254,7 +259,8 @@ img{
     height:  32px;
     border-radius: 5px;
     padding: 8px 3px;
-    display:  inline-block;
+    /*display:  inline-block;*/
+    display: none;
     margin-bottom: 16px;
     transition:  transform .5s ease;
 }
@@ -267,12 +273,15 @@ img{
 
 .nav__links-container {
     padding: 16px 0 0;
-    height: 0;
-    overflow: hidden;
-    border-top: 1px solid #59c5bd;
-    border-bottom: 1px solid #59c5bd;
-    opacity: 0;
+    /*height: 0;*/
+    /*overflow: hidden;*/
+    /*border-top: 1px solid #59c5bd;*/
+    /*border-bottom: 1px solid #59c5bd;*/
+    /*opacity: 0;*/
     transition: all .5s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav_m-open .nav__m-ico {
@@ -364,7 +373,7 @@ margin-bottom: 40px;
 }
 .ItemCard__available-and-controls {
     position: relative;
-    height: 51px;
+    height: 40px;
 }
 .ItemCard__available {
     text-transform: uppercase;
@@ -372,18 +381,18 @@ margin-bottom: 40px;
     margin-bottom: 5px;
 }
 .ItemCard__available-container {
-    height: 51px;
+    height: 40px;
     width: 190px;
 }
 .ItemCard__name {
     font-family: 'Comfortaa-Bold';
     font-size: 16px;
-    margin-bottom: 11px;
+    margin-bottom: 5px;
 }
 .ItemCard__price {
     font-family: 'Comfortaa-Bold';
     font-size: 14px;
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
 }
 .ItemCard__categories {
     font-size: 10px;

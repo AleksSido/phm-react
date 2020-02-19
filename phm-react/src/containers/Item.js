@@ -89,6 +89,7 @@ class Item extends React.Component {
    const itemUrlToShare = lang + "/" + category + "/" + itemObj.idString + "/";
    const imgUrlToShare = require(`./../assets/img/fullsize_with_logo/${category}/${itemObj.idString}/${itemObj.idString}_1.jpg`);
    const itemTitle = itemObj.type[lang] + ' "' + itemObj.name[lang] + '"';
+   const price = itemObj.available === 'SALE' ? itemObj.price + ' ' + text.hryvny : '';
    return (
 
        <>
@@ -122,7 +123,7 @@ class Item extends React.Component {
 
              <div className="item__type-and-price">
                <div className="item__type">{itemObj.type[lang]}</div>
-               <div className="item__price">{itemObj.price + ' ' + text.hryvny}</div>
+               <div className="item__price">{price}</div>
              </div>
              <div className="item__available-and-note">
                <div className="item__avialable">{available}</div>

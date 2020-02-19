@@ -24,13 +24,13 @@ class ItemCard extends React.Component {
     }
 
     const available = text.available[this.props.item.available][this.props.lang];
-    const availableNote = this.props.item.available === "ORDER" ? text.isNotAvailableNote[this.props.lang] : null;
+    // const availableNote = this.props.item.available === "ORDER" ? text.isNotAvailableNote[this.props.lang] : null;
     const categories = this.props.item.addCategories ? [...this.props.item.addCategories, this.props.item.categoryString]
       : [this.props.item.categoryString];
     const textCategories = categories.map((item, index) => {
       return (<span key={item + index}>{text[item][this.props.lang]}</span>);
     });
-
+    const price = this.props.item.available === 'SALE' ? this.props.item.price + ' ' + text.hryvny : '';
     return (
       <div className="ItemCard">
         <div className="ItemCard__img-container">
@@ -41,7 +41,8 @@ class ItemCard extends React.Component {
         <div className="ItemCard__available-and-controls">
           <div className="ItemCard__available-container">
             <div className="ItemCard__available">{available}</div>
-            <div className="ItemCard__available-note">{availableNote}</div>
+            <div className="ItemCard__price">{price}</div>
+           
           </div>
           <div className="ItemCard__img-controls">
             <div className="ItemCard__left-arrow" onClick={this.handlePrev}/>
@@ -49,10 +50,12 @@ class ItemCard extends React.Component {
           </div>
         </div>
         <div className="ItemCard__name">{this.props.item.name[this.props.lang]}</div>
-        <div className="ItemCard__price">{this.props.item.price + ' ' + text.hryvny}</div>
+        
         <div className="ItemCard__categories">{textCategories}</div>
       </div>
     );
   }
 }
 export default ItemCard;
+
+ // <div className="ItemCard__available-note">{availableNote}</div>

@@ -57,6 +57,8 @@
 
     .nav__link {
         margin: 0 30px 16px;
+        color: #2f2f2f;
+    text-decoration: none;
     }
 
     .header-title {
