@@ -1020,7 +1020,7 @@ const beads = [
       uk: "Зіркова ніч Персії",
       ru: "Звездная ночь Персии"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 400,
     imagesNumber: 6,
     description: {
