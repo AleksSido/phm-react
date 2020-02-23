@@ -661,7 +661,7 @@ const collections = [
       ru: "Красный ручеек"
     },
     available: "SALE",
-    price: 100,
+    price: 300,
     imagesNumber: 6,
     description: {
       uk: [
