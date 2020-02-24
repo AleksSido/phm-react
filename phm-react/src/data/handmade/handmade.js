@@ -246,7 +246,8 @@ const handmade = [
       uk: "Біла заметіль",
       ru: "Белая метель"
     },
-    available: "SALE",
+    available: "ORDER
+    ",
     price: 1200,
     imagesNumber: 6,
     description: {
@@ -358,7 +359,7 @@ const handmade = [
       uk: "Клубочки",
       ru: "Клубочки"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 120,
     imagesNumber: 4,
     description: {
@@ -412,7 +413,7 @@ const handmade = [
       uk: "Напівкульки",
       ru: "Полушарики"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 150,
     imagesNumber: 6,
     description: {
@@ -520,7 +521,7 @@ const handmade = [
       uk: "Набір новорічних підвісок",
       ru: "Набор новогодних подвесок"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 120,
     imagesNumber: 5,
     description: {
@@ -574,7 +575,7 @@ const handmade = [
       uk: "Зірочка на ялинку",
       ru: "Звездочка на елочку"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 120,
     imagesNumber: 5,
     description: {
@@ -601,7 +602,7 @@ const handmade = [
       uk: "Дзвіночок з люрексом",
       ru: "Колокольчик с люрексом"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 60,
     imagesNumber: 5,
     description: {
@@ -709,7 +710,7 @@ const handmade = [
       uk: "Напівкульки з голубим шнурочком",
       ru: "Полушарики с голубым шнурочком"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 150,
     imagesNumber: 5,
     description: {
@@ -958,7 +959,7 @@ const handmade = [
       uk: "Кульки новорічні фіолетові",
       ru: "Шарики новогодние фиолетовые"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 180,
     imagesNumber: 5,
     description: {
@@ -1016,7 +1017,7 @@ const handmade = [
       uk: "Сніжинки на ялинку №4",
       ru: "Снежинки на елку №4"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 100,
     imagesNumber: 5,
     description: {
@@ -1043,7 +1044,7 @@ const handmade = [
       uk: "Сніжинки на ялинку №5",
       ru: "Снежинки на елку №5"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 120,
     imagesNumber: 5,
     description: {
