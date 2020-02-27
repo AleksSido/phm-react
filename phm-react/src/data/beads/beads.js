@@ -865,7 +865,7 @@ const beads = [
       uk: "Смарагдова палітра",
       ru: "Изумрудная палитра"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 350,
     imagesNumber: 5,
     description: {
@@ -1054,7 +1054,7 @@ const beads = [
       ru: "Краски богатств восточного базара"
     },
     available: "SALE",
-    price: 700,
+    price: 500,
     imagesNumber: 6,
     description: {
       uk: [
