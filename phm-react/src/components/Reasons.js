@@ -3,6 +3,7 @@ import {Helmet} from "react-helmet";
 import PageTitleContainer from "./PageTitleContainer";
 import text from "../data/text";
 import DeliveredVideo from "./DeliveredVideo";
+import ScrollToTop from "../containers/ScrollToTop";
 
 const Reasons = (props) => {
   return (
@@ -10,6 +11,7 @@ const Reasons = (props) => {
       <Helmet>
         <title>{text.siteTitle + " - " + text.reasonsToBuy.pageTitle[props.lang]}</title>
       </Helmet>
+      <ScrollToTop/>
       <PageTitleContainer>{text.reasonsToBuy.pageTitle[props.lang]}</PageTitleContainer>
       <div className="HowToBuy">
         <div className="HowToBuy__text">
