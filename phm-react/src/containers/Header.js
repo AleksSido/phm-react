@@ -52,7 +52,9 @@ class Header extends React.Component {
             <h2 className="header-motto">{text.siteMotto[this.props.lang]}</h2>
           </div>
           <div className="header-link-get__container">
-            <NavLink to={`/${this.props.lang}/how-to-buy/`}>{text.howToBuy[this.props.lang]}</NavLink>
+            <NavLink className={'header-link'} to={`/${this.props.lang}/about/`}>{text.about.pageTitle[this.props.lang]}</NavLink>
+            <NavLink className={'header-link'} to={`/${this.props.lang}/how-to-buy/`}>{text.howToBuy[this.props.lang]}</NavLink>
+            <NavLink className={'header-link'} to={`/${this.props.lang}/how-to-order/`}>{text.howToOrder.link[this.props.lang]}</NavLink>
           </div>
         </div>
         <nav id="headerNav" className={headerNavClassName}>

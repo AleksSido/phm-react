@@ -7,6 +7,8 @@ import Page from "./Page";
 import text from "../data/text";
 import ReactGA from "react-ga";
 import Reasons from "./Reasons";
+import About from "./About";
+import HowToOrder from "./HowToOrder";
 
 const LanguageHandler = (props) => {
   const lang = props.match.params.lang ? props.match.params.lang : 'uk';
@@ -18,10 +20,24 @@ const LanguageHandler = (props) => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
+  if (category === 'about') {
+    return (
+      <Page lang={lang} currentLocation={props.location.pathname}>
+        <About lang={lang}/>
+      </Page>
+      );
+  }
   if (category === 'how-to-buy') {
     return (
       <Page lang={lang} currentLocation={props.location.pathname}>
         <HowToBuy lang={lang}/>
+      </Page>
+      );
+  }
+  if (category === 'how-to-order') {
+    return (
+      <Page lang={lang} currentLocation={props.location.pathname}>
+        <HowToOrder lang={lang}/>
       </Page>
       );
   }

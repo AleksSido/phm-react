@@ -11,7 +11,7 @@ class ListOfItems extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      offset: 12,
+      offset: 1000,
       count: 0,
       offsetIsSet: false
     };
@@ -21,7 +21,9 @@ class ListOfItems extends React.Component{
       <NavLink key={item.categoryString + '-link-'+ index}
         className={'ItemCard__link'}
                to={'/' + lang + '/'+ item.categoryString +'/'+item.idString + '/'}>
-        <ItemCard item={item} lang={this.props.lang} />
+        {this.state.offsetIsSet ? (
+          <ItemCard item={item} lang={this.props.lang} />
+        ) : item.idString}
       </NavLink>
     )
   };

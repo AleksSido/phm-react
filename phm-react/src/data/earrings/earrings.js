@@ -1127,7 +1127,7 @@ const earrings = [
       uk: "Довжина - 10 см.",
       ru: "Длина - 10 см."
     }
-    },
+  },
   {
     idString: "earrings_37",
     id: 338,

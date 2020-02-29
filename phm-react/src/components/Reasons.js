@@ -2,6 +2,7 @@ import * as React from 'react';
 import {Helmet} from "react-helmet";
 import PageTitleContainer from "./PageTitleContainer";
 import text from "../data/text";
+import DeliveredVideo from "./DeliveredVideo";
 
 const Reasons = (props) => {
   return (
@@ -36,9 +37,8 @@ const Reasons = (props) => {
           {text.reasonsToBuy.fifthReasonText[props.lang]}
         </div>
         <div className="HowToBuy__divider"/>
+        <DeliveredVideo lang={props.lang}/>
       </div>
-
-
 
     </>
 

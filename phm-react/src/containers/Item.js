@@ -65,7 +65,7 @@ class Item extends React.Component {
      photos.push(photo);
    }
    const available = text.available[itemObj.available][lang];
-   const availableNote = itemObj.available === "ORDER" ? text.isNotAvailableNote[lang] : null;
+   // const availableNote = itemObj.available === "ORDER" ? text.isNotAvailableNote[lang] : null;
    // const categories = itemObj.addCategories ? [category, ...itemObj.addCategories] : [category];
    // const textCategories = categories.map((item, index) => {
    //   return (<span key={item + index}>{text[item][lang]}</span>);
@@ -127,7 +127,7 @@ class Item extends React.Component {
              </div>
              <div className="item__available-and-note">
                <div className="item__avialable">{available}</div>
-               <div className="item__note">{availableNote}</div>
+               {/*<div className="item__note">{availableNote}</div>*/}
              </div>
              {/*<div className="item__categories">{textCategories}</div>*/}
              {itemObj.related ? (

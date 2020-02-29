@@ -21,13 +21,15 @@
 
     .header-title-and-motto {
         margin: auto;
+        width: 50%;
     }
 
     .header-link-get__container {
-        text-align: right;
-        width: 16%;
+        justify-content: flex-end;
+        width: 26%;
         margin-bottom: 0;
     }
+
 
     .header-motto {
         display: block;
@@ -72,6 +74,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 0;
     }
     .main-wrapper {
         padding-bottom: 40px;
@@ -94,6 +97,9 @@
         margin: 0 10px;
         display: inline;
     }
+    .header-link {
+
+    }
 }
 @media (min-width: 1000px) {
     .item-data {
@@ -106,6 +112,9 @@
     }
     .ItemCard__link {
         margin: 9px;
+    }
+    .header-link-get__container {
+        width: 16%;
     }
 }
 

@@ -34,6 +34,11 @@
 
 .header-link-get__container {
     width:  auto;
+    display: block;
+}
+.header-link {
+    text-align: right;
+    padding-right: 0;
 }
 
 .nav__links-container,
@@ -62,5 +67,18 @@
     .item-cards {
         justify-content: normal;
     }
-
+    .ItemCard__img-controls {
+        opacity: 0;
+    }
+    .ItemCard__name {
+        color: #2f2f2f;
+        text-decoration: none;
+    }
+    .ItemCard__link:hover .ItemCard__name,
+    .ItemCard__name:hover {
+        color: #f6a3c7;
+    }
+    .header-title-and-motto {
+        width: auto;
+    }
 }
