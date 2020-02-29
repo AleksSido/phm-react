@@ -246,8 +246,7 @@ const handmade = [
       uk: "Біла заметіль",
       ru: "Белая метель"
     },
-    available: "ORDER
-    ",
+    available: "ORDER",
     price: 1200,
     imagesNumber: 6,
     description: {

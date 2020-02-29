@@ -1160,38 +1160,7 @@ const earrings = [
       uk: "Довжина - 13 см.",
       ru: "Длина - 13 см."
     }
-  },
-  {
-    idString: "earrings_38",
-    id: 339,
-    type: {
-      uk: "Сережки",
-      ru: "Серьги"
-    },
-    name: {
-      uk: "",
-      ru: ""
-    },
-    available: "SALE",
-    price: 180,
-    imagesNumber: 5,
-    description: {
-      uk: [
-        "",
-        "",
-        ""
-      ],
-      ru: [
-        "",
-        "",
-        ""
-      ]
-    },
-    dimensions: {
-      uk: "Довжина - 7 см.",
-      ru: "Длина - 7 см."
-    }
-  
+  }
 
 ];
 export default earrings;
