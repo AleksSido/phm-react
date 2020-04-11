@@ -57,7 +57,7 @@ class HeaderContacts extends React.Component {
           <div className="header-contacts__fb-ico">
             <FacebookSvg/>
           </div>
-          <a href="https://m.me/prykrasyHm" className="header-contacts__link" target="_blank">
+          <a href="https://m.me/prykrasyHm" className="header-contacts__link" target="_blank" rel="noopener noreferrer">
             {text.contactOnFb[this.props.lang]}
           </a>
         </div>

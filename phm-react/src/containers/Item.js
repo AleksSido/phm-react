@@ -162,17 +162,17 @@ class Item extends React.Component {
              <div className="item__share-btns">
                <a href={"https://www.facebook.com/sharer/sharer.php?u=http://prykrasy-hm.com.ua/"
                + itemUrlToShare}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   className="item__share-btn"><FacebookSvg/></a>
                <a href={"https://pinterest.com/pin/create/button/?url=http://prykrasy-hm.com.ua/"
                + itemUrlToShare
                + "&media=http://prykrasy-hm.com.ua/"
                + imgUrlToShare
                + "&description=" + itemTitle}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   className="item__share-btn"><PinterestSvg/></a>
                <a href={"https://twitter.com/home?status=http%3A//prykrasy-hm.com.ua/" + itemUrlToShare}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   className="item__share-btn"><TwitterSvg/></a>
              </div>
            </div>

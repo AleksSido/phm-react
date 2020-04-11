@@ -32,10 +32,10 @@ const Footer = (props) => {
        <HeaderContacts lang={props.lang}/>
       </div>
       <div className="social-contacts">
-        <a href={"https://www.facebook.com/prykrasyHm"} target="_blank" className="social-contacts__item">
+        <a href={"https://www.facebook.com/prykrasyHm"} target="_blank" rel="noopener noreferrer" className="social-contacts__item">
           <FacebookSvg/>
         </a>
-        <a href={"https://www.instagram.com/prykrasy_hm/"} target="_blank" className="social-contacts__item">
+        <a href={"https://www.instagram.com/prykrasy_hm/"} target="_blank" rel="noopener noreferrer" className="social-contacts__item">
           <InstragramSvg/>
         </a>
       </div>
