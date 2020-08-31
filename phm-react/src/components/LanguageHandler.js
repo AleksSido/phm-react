@@ -9,6 +9,8 @@ import ReactGA from "react-ga";
 import Reasons from "./Reasons";
 import About from "./About";
 import HowToOrder from "./HowToOrder";
+import Fair from "./Fair";
+import Fairs from "./Fairs";
 
 const LanguageHandler = (props) => {
   const lang = props.match.params.lang ? props.match.params.lang : 'uk';
@@ -45,6 +47,17 @@ const LanguageHandler = (props) => {
     return (
       <Page lang={lang} currentLocation={props.location.pathname}>
         <Reasons lang={lang}/>
+      </Page>
+      );
+  }
+  if (category === 'fairs') {
+    return item ? (
+      <Page lang={lang} currentLocation={props.location.pathname}>
+        <Fair lang={lang} item={item}/>
+      </Page>
+      ) : (
+      <Page lang={lang} currentLocation={props.location.pathname}>
+        <Fairs lang={lang}/>
       </Page>
       );
   }

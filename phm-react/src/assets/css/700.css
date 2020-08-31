@@ -100,6 +100,9 @@
     .header-link {
 
     }
+    .Announcement__heading {
+        font-size: 20px;
+    }
 }
 @media (min-width: 1000px) {
     .item-data {

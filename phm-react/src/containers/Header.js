@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import LogoSvg from "../svg-components/LogoSvg";
 import text from "../data/text";
 import HeaderContacts from "../components/HeaderContacts";
+import Announcement from "../components/Announcement";
 
 class Header extends React.Component {
   constructor(props){
@@ -53,6 +54,7 @@ class Header extends React.Component {
           </div>
           <div className="header-link-get__container">
             <NavLink className={'header-link'} to={`/${this.props.lang}/about/`}>{text.about.pageTitle[this.props.lang]}</NavLink>
+            <NavLink className={'header-link'} to={`/${this.props.lang}/fairs/`}>{text.fairs.pageTitle[this.props.lang]}</NavLink>
             <NavLink className={'header-link'} to={`/${this.props.lang}/how-to-buy/`}>{text.howToBuy[this.props.lang]}</NavLink>
             <NavLink className={'header-link'} to={`/${this.props.lang}/how-to-order/`}>{text.howToOrder.link[this.props.lang]}</NavLink>
           </div>
@@ -68,6 +70,7 @@ class Header extends React.Component {
           </div>
 
         </nav>
+        <Announcement lang={this.props.lang}/>
       </header>
     );
   }
