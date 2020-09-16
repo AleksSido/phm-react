@@ -52,7 +52,6 @@ const LanguageHandler = (props) => {
       );
   }
   if (category === 'fairs') {
-    console.log(item);
     return item ? (
       <Page lang={lang} currentLocation={props.location.pathname}>
         {item.includes('announcement') ? (
