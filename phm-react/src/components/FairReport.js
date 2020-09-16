@@ -3,7 +3,6 @@ import {Helmet} from "react-helmet";
 import PageTitleContainer from "./PageTitleContainer";
 import text from "../data/text";
 import ScrollToTop from "../containers/ScrollToTop";
-import schemeImg from "../assets/img/fair-plan.jpg";
 import {Link} from "react-router-dom";
 import Slider from "react-slick";
 
