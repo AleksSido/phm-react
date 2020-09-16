@@ -792,8 +792,20 @@ margin-bottom: 40px;
 }
 .Fairs__link {
     text-decoration: underline;
+    display: block;
+    margin-bottom: 20px;
 }
 .Fair__scheme {
     width: 100%;
     max-width: 100%;
+}
+.FairReport__text {
+    line-height: 1.6;
+    font-style: italic;
+}
+.FairReport__link {
+    color: #f6a3c7;
+}
+.FairReport__link:hover {
+    text-decoration: underline;
 }

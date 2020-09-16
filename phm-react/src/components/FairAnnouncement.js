@@ -5,7 +5,7 @@ import text from "../data/text";
 import ScrollToTop from "../containers/ScrollToTop";
 import schemeImg from "../assets/img/fair-plan.jpg";
 
-const Fair = (props) => {
+const FairAnnouncement = (props) => {
   return (
     <>
       <Helmet>
@@ -30,4 +30,4 @@ const Fair = (props) => {
 
   );
 };
-export default Fair;
+export default FairAnnouncement;

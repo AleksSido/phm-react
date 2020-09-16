@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 import LogoSvg from "../svg-components/LogoSvg";
 import text from "../data/text";
 import HeaderContacts from "../components/HeaderContacts";
-import Announcement from "../components/Announcement";
 
 class Header extends React.Component {
   constructor(props){
@@ -70,7 +69,7 @@ class Header extends React.Component {
           </div>
 
         </nav>
-        <Announcement lang={this.props.lang}/>
+        {/*<Announcement lang={this.props.lang}/>*/}
       </header>
     );
   }

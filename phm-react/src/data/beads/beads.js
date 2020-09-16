@@ -1421,7 +1421,7 @@ const beads = [
       uk: "Райський сад",
       ru: "Райский сад"
     },
-    available: "SALE",
+    available: "ORDER",
     price: 400,
     imagesNumber: 5,
     description: {
