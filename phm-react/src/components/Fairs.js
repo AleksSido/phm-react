@@ -14,8 +14,8 @@ const Fairs = (props) => {
       <ScrollToTop/>
       <PageTitleContainer>{text.fairs.pageTitle[props.lang]}</PageTitleContainer>
       <div className="HowToBuy">
-        <Link to={`/${props.lang}/fairs/fair_report_150920`} className={'Fairs__link'}>{text['fair_report_150920'].pageTitle[props.lang]}</Link>
-        <Link to={`/${props.lang}/fairs/fair_announcement_290820`} className={'Fairs__link'}>{text['fair_announcement_290820'].pageTitle[props.lang]}</Link>
+        <Link to={`/${props.lang}/fairs/fair_report_150920/`} className={'Fairs__link'}>{text['fair_report_150920'].pageTitle[props.lang]}</Link>
+        <Link to={`/${props.lang}/fairs/fair_announcement_290820/`} className={'Fairs__link'}>{text['fair_announcement_290820'].pageTitle[props.lang]}</Link>
       </div>
     </>
 
