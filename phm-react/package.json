@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "imagemin": "^7.0.1",
+    "moment": "^2.29.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-ga": "^2.5.6",

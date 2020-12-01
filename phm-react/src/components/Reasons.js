@@ -4,15 +4,30 @@ import PageTitleContainer from "./PageTitleContainer";
 import text from "../data/text";
 import DeliveredVideo from "./DeliveredVideo";
 import ScrollToTop from "../containers/ScrollToTop";
+import moment from '../moment/momentInstance';
+
+const definePageTitleEndKey = (monthIndex) => {
+  if (monthIndex > 9) {
+    return 'newYear';
+  } else if (monthIndex < 3) {
+    return 'startOfYear';
+  } else {
+    return 'afterMarch';
+  }
+};
 
 const Reasons = (props) => {
+  const currentMonth = moment().month();
+  const pageTitleEndKey = definePageTitleEndKey(currentMonth);
+  const pageTitle = text.reasonsToBuy.pageTitle[props.lang]
+    + text.reasonsToBuy.pageTitleEnd[props.lang][pageTitleEndKey];
   return (
     <>
       <Helmet>
-        <title>{text.siteTitle + " - " + text.reasonsToBuy.pageTitle[props.lang]}</title>
+        <title>{text.siteTitle + " - " + pageTitle}</title>
       </Helmet>
       <ScrollToTop/>
-      <PageTitleContainer>{text.reasonsToBuy.pageTitle[props.lang]}</PageTitleContainer>
+      <PageTitleContainer>{pageTitle}</PageTitleContainer>
       <div className="HowToBuy">
         <div className="HowToBuy__text">
           {"1. "}<b>{text.reasonsToBuy.firstReasonTitle[props.lang]}</b> {" "}
