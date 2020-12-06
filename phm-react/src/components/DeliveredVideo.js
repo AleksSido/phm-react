@@ -8,7 +8,7 @@ const DeliveredVideo = (props) => {
         {text.videoTitle[props.lang]}
       </div>
       <div className="Utube-video__container">
-        <iframe className="Utube-video__iframe" height="315" src="https://www.youtube.com/embed/UgowrO3xNg4" frameBorder="0"
+        <iframe className="Utube-video__iframe" height="315" src="https://www.youtube.com/embed/yARkuRwRilk" frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen/>
       </div>
