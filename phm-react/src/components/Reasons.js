@@ -5,6 +5,9 @@ import text from "../data/text";
 import DeliveredVideo from "./DeliveredVideo";
 import ScrollToTop from "../containers/ScrollToTop";
 import moment from '../moment/momentInstance';
+import {Link} from "react-router-dom";
+import all from "../data/all";
+import Recommended from "../containers/Recommended";
 
 const definePageTitleEndKey = (monthIndex) => {
   if (monthIndex > 9) {
@@ -21,6 +24,25 @@ const Reasons = (props) => {
   const pageTitleEndKey = definePageTitleEndKey(currentMonth);
   const pageTitle = text.reasonsToBuy.pageTitle[props.lang]
     + text.reasonsToBuy.pageTitleEnd[props.lang][pageTitleEndKey];
+  const menuCategories = all.map((item, index) => {
+    return (
+      <Link
+        className="FairReport__link"
+        to={'/' + props.lang + '/' + item.idString + '/'}
+        key={'menu-category-' + index}>{text[item.idString][props.lang]}</Link>);
+  });
+  const handmadeCategory = menuCategories[5];
+  menuCategories.splice(5, 1);
+  const joinedMenuCategories = menuCategories.map((item, index) => {
+    if (index === menuCategories.length - 1) {
+      return item;
+    } else {
+      return (
+        <span key={'jmc'+index}>{item}{", "}</span>
+      )
+    }
+  });
+
   return (
     <>
       <Helmet>
@@ -54,6 +76,15 @@ const Reasons = (props) => {
           {text.reasonsToBuy.fifthReasonText[props.lang]}
         </div>
         <div className="HowToBuy__divider"/>
+        <div className="HowToBuy__text">{text.reasonsToBuy.summary1[props.lang]}</div>
+        <div className="HowToBuy__text">{text.reasonsToBuy.summary2[props.lang]}{joinedMenuCategories}{"."}</div>
+        <div className="HowToBuy__text">
+          {text.reasonsToBuy.summary3[props.lang]}
+          {handmadeCategory}
+          {text.reasonsToBuy.summary4[props.lang]}
+        </div>
+        <div className="HowToBuy__text">{text.reasonsToBuy.summary5[props.lang]}</div>
+        <Recommended lang={props.lang}/>
         <DeliveredVideo lang={props.lang}/>
       </div>
 

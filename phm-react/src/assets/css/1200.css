@@ -81,4 +81,7 @@
     .header-title-and-motto {
         width: auto;
     }
+    .FairReport__link {
+        text-decoration: none;
+    }
 }

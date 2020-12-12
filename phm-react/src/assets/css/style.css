@@ -805,6 +805,7 @@ margin-bottom: 40px;
 }
 .FairReport__link {
     color: #f6a3c7;
+    text-decoration: underline;
 }
 .FairReport__link:hover {
     text-decoration: underline;
