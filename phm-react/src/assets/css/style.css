@@ -373,7 +373,7 @@ margin-bottom: 40px;
     /*left: 0;*/
     /*bottom: 0;*/
     height: 260px;
-    height: -webkit-fill-available;
+    /*height: -webkit-fill-available;*/
     object-fit: cover;
 }
 .ItemCard__link {
